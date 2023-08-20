@@ -1,6 +1,9 @@
+<p align="center">
 Personal Cloud Manifesto
+</p>
+<p align="center">
 by April Software, August 30, 2022
-
+</p>
 
 
 ## Goal of the document
@@ -9,9 +12,9 @@ The intention of this document is to promote our point of view about cloud compu
 ## Introduction
 According to Wikipedia, cloud computing can be defined as follow:
 
-“Cloud computing[1] is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user.[2] Large clouds often have functions distributed over multiple locations, each location being a data center. Cloud computing relies on sharing of resources to achieve coherence and typically using a "pay-as-you-go" model which can help in reducing capital expenses but may also lead to unexpected operating expenses for unaware users.
+Cloud computing is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user.Large clouds often have functions distributed over multiple locations, each of which is a data center. Cloud computing relies on sharing of resources to achieve coherence and typically uses a pay-as-you-go model, which can help in reducing capital expenses but may also lead to unexpected operating expenses for users. 
 
-Advocates of public and hybrid clouds claim that cloud computing allows companies to avoid or minimize up-front IT infrastructure costs. Proponents also claim that cloud computing allows enterprises to get their applications up and running faster, with improved manageability and less maintenance, and that it enables IT teams to more rapidly adjust resources to meet fluctuating and unpredictable demand,[4][5][6] providing burst computing capability: high computing power at certain periods of peak demand.[7]”
+Advocates of public and hybrid clouds claim that cloud computing allows companies to avoid or minimize up-front IT infrastructure costs. Proponents also claim that cloud computing allows enterprises to get their applications up and running faster, with improved manageability and less maintenance, and that it enables IT teams to more rapidly adjust resources to meet fluctuating and unpredictable demand, providing burst computing capability: high computing power at certain periods of peak demand.
 
 There are many reasons why organizations want to transition to the cloud and every organization decision is unique. There are however common reasons such as flexibility, security, scalability and availability.
 
@@ -32,7 +35,7 @@ If cost is the main argument against private cloud, what can be done to lower si
 
 High availability means nearly no down time. Usually individuals and small organizations can tolerate down time as long as it does not happen too often and they are potentially planned. The return to operation must be quick. There are ways to mitigate the risk of having down time but it gives the possibility to do potential savings.
 
-Security cannot be scarified but the location of the cloud can give the possibility to do savings too.  For instance the cloud hardware could be hosted on premise. This may sound like a step back but it depends on the degree of expertise required and the capacity of the organization to protect the physical access to the cloud physical hardware. Obviously the cloud hardware could be hosted in a rack in a data center chosen by the organization. 
+Security cannot be scarified but the location of the cloud can give the possibility to do savings too. For instance the cloud hardware could be hosted on premise. This may sound like a step back but it depends on the degree of expertise required and the capacity of the organization to protect the physical access to the cloud physical hardware. Obviously the cloud hardware could be hosted in a rack in a data center chosen by the organization. 
 
 Except if the pay as you go is a requirement (i.e. periodic demand), most of the small and medium organizations have stable needs. Flexibility and scalability can be achieved with a lower degree of immediacy.
 
