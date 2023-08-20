@@ -1,4 +1,4 @@
-# Personal Cloud Manifesto by April Software, August 30, 2022
+# Personal Cloud Manifesto by [April Software](https://www.aprilsoftware.com/), August 30, 2022
 
 ## Goal of the document
 The intention of this document is to promote our point of view about cloud computing. Obviously many arguments could be opposed and the intention of this document is not to list all pro and cons about the different cloud computing options but rather explaining the alternative we see for small and medium organizations for which data location and jurisdiction matters.
@@ -20,7 +20,7 @@ Cost cutting may be considered by organizations as a key element in their decisi
 
 One of the main key benefit of cloud computing and the pay as you go payment method is definitely the scalability and the ability to scale up or down the resources without buying extra hardware.
 
-At April Software, we believe in private cloud and we understand the difficulties to operate private cloud offers. We believe that there is a room to minimize the entry price to private cloud and that there is a room to improve the user experience for small and medium organizations.
+At [April Software](https://www.aprilsoftware.com/), we believe in private cloud and we understand the difficulties to operate private cloud offers. We believe that there is a room to minimize the entry price to private cloud and that there is a room to improve the user experience for small and medium organizations.
 
 ## Personal Cloud
 The size of the organizations play definitely a role in the adoption of cloud computing. Individuals and small organizations have no choice than choosing public cloud scarifying eventually confidentiality. Private cloud is not an option for individuals and small organizations mainly because of cost. 
