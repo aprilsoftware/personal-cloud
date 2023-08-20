@@ -8,7 +8,7 @@ The open source ecosystem is very rich and provides everything you would need to
 
 We selected [Debian](https://www.debian.org/) as operating system. There are very good alternatives to Debian; which are eventually backed by commercial companies. Howver Debian fits with the principle of being as less as possible dependent on commercial software and commercially supported open source software. Even do they remain open source software, some other distributions are governed mainly by the companies that support them. On the other end, Debian is governed by the Debian community. Again there are pro and cons and we can debate it years. Our intention here is about sharing the knowledge we collected over the years operating the software stack we built.
 
-We selected [GlusterFS](https://www.gluster.org/) for the storage for its simplicity and its relability. 
+We selected [GlusterFS](https://www.gluster.org/) for the storage, for its simplicity and its relability. 
 
 The first brick of the infrastructure is what we called a Personal Cluster (Here also as a reference to PC, the three PC acronyms being a different layer of abstraction). A Personal Cluster takes care of VMs and their Storage in a high availability way. From there we deploy Kubernetes Clusters and cloud services.
 
