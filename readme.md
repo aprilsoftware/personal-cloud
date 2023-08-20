@@ -17,3 +17,5 @@ Building a cluster requires you to have sevral computers available. The minimum 
 Start by installing your first [Personal Cluster](personal-cluster.md) to operate your first [Personal Cloud](pc-manifesto.md).
 
 We learned a lot during that journey and we hope that you will enjoy it.
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
