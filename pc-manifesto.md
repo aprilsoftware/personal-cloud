@@ -35,7 +35,7 @@ Except if the pay as you go is a requirement (i.e. periodic demand), most of the
 
 The level of expertise required plays also an important part in the cost and it can be mitigated with high automation which at the end of the day is software. 
 
-To the maximum extend, it should be as easy as plugging a box to the Internet and power it. It should be ready to use. More computing power could be added just by adding another box. We propose the terms [Personal Cloud](pc-manifesto.md) and [Personal Cluster](pc-manifesto.md) for the assemblage of such boxes.
+To the maximum extend, it should be as easy as plugging a box to the Internet and power it. It should be ready to use. More computing power could be added just by adding another box. We propose the terms Personal Cloud and Personal Cluster for the assemblage of such boxes.
 
 ## Conclusion
 We see an alternative to existing cloud offers which should focus mainly on small and medium sized organizations for which the data control, confidentiality, location and jurisdiction are keys. The software automation is the key to open the possibility to use such alternative. It does not mean that large organizations could not use such cloud offer but it should be designed firstly for small and medium organizations.
