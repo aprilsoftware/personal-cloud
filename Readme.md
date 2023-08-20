@@ -1,6 +1,8 @@
 # personal-cloud
 personal-cloud (as a reference to [Personal Computer](https://en.wikipedia.org/wiki/Personal_computer) / PC) is a collection of How-To that we developed at April Software to run our software stack. We think it could benefit to others. 
 
+ Learning
+
 We decided to run our own IT infrastructure based on the principle of being as less as possible dependent on commercial software or commercially supported open source software. 
 There are pro and cons using commercial software or open source software. We believe in open source and to the power of the community. We think that it is the most sustainable approach and we believe in long term businesses.  
 
