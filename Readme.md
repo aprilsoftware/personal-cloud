@@ -1,5 +1,5 @@
 # personal-cloud
-personal-cloud (as a reference to Personal Coputer / PC) is a collection of How-To that we developed at April Software to run our software stack. We think it could benefit to others. 
+personal-cloud (as a reference to [Personal Computer](https://en.wikipedia.org/wiki/Personal_computer) / PC) is a collection of How-To that we developed at April Software to run our software stack. We think it could benefit to others. 
 
 We decided to run our own IT infrastructure based on the principle of being as less as possible dependent on commercial software or commercially supported open source software. 
 There are pro and cons using commercial software or open source software. We believe in open source and to the power of the community. We think that it is the most sustainable approach and we believe in long term businesses.  
@@ -10,7 +10,7 @@ We selected [Debian](https://www.debian.org/) as operating system. There are ver
 
 We selected [GlusterFS](https://www.gluster.org/) for the storage for its simplicity and its relability. 
 
-The first brick of the infrastructure is what we called a Personal Cluster (Here also as a reference to PC, the three being different abstraction layers). The Personal Cluster takes care of the VMs and their Storage in a high availability way. From there we deploy Kubernetes Clusters and cloud services.
+The first brick of the infrastructure is what we called a Personal Cluster (Here also as a reference to PC, the three PC acronyms being a different layer of abstraction). The Personal Cluster takes care of the VMs and their Storage in a high availability way. From there we deploy Kubernetes Clusters and cloud services.
 
 Building a cluster requires you to have sevral computers available. The minimum is 2 and the more is the better. However the number of computers follows the rules given by GlusterFS. Depending on the number of replica you would like to keep, it should be a multiple of it. For instance, you could have a cluster or 2, 4, 6, x nodes storing 2 replicas or most probably 3, 6, 9, x storing 3 replicas (to avoid Split-Brains).
 
