@@ -1,11 +1,7 @@
-<p align="center">
 # Personal Cloud Manifesto
-</p>
-<p align="center">
 by April Software, August 30, 2022
-</p>
-
-
+<p/>
+<p/>
 ## Goal of the document
 The intention of this document is to promote our point of view about cloud computing. Obviously many arguments could be opposed and the intention of this document is not to list all pro and cons about the different cloud computing options but rather explaining the alternative we see for small and medium organizations for which data location and jurisdiction matters.
 
