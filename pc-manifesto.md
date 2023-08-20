@@ -1,5 +1,5 @@
 <p align="center">
-Personal Cloud Manifesto
+# Personal Cloud Manifesto
 </p>
 <p align="center">
 by April Software, August 30, 2022
