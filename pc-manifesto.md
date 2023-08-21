@@ -1,7 +1,7 @@
 # Personal Cloud Manifesto by [April Software](https://www.aprilsoftware.com/), August 30, 2022
 
 ## Goal of the document
-The intention of this document is to promote our point of view about cloud computing. Obviously many arguments could be opposed and the intention of this document is not to list all pro and cons about the different cloud computing options but rather explaining the alternative we see for small and medium organizations for which data location and jurisdiction matters.
+The intention of this document is to promote our point of view about cloud computing. Obviously many arguments could be opposed and the intention of this document is not to list all pro and cons about the different cloud computing options but rather explaining the alternative we see for individuals and small organizations for which data location and jurisdiction matters.
 
 ## Introduction
 According to Wikipedia, cloud computing can be defined as follow:
@@ -14,15 +14,13 @@ Advocates of public and hybrid clouds claim that cloud computing allows companie
 
 There are many reasons why organizations want to transition to the cloud and every organization decision is unique. There are however common reasons such as flexibility, security, scalability and availability.
 
-Public and hybrid cloud computing require the organizations trusting the cloud provider. Even if solutions exist; which are complex to implement, the cloud provider could potentially access the organization’s data. For most of the organizations, especially small and medium organizations, this is not an issue, but there are organizations for which it can be an issue, such as lawyers or regulated companies. Moreover, especially regarding American cloud providers (Cloud Act), the jurisdiction could potentially be an issue too for those organizations. 
+Public and hybrid cloud computing require the organizations trusting the cloud provider. Even if solutions exist; which are complex to implement, the cloud provider could potentially access the organization’s data. For most of the organizations, especially small organizations, this is not an issue, but there are organizations for which it can be an issue, such as lawyers or regulated companies. Moreover, especially regarding American cloud providers (Cloud Act), the jurisdiction could potentially be an issue too for those organizations. 
 
-The alternative to public and hybrid cloud could be private cloud but the technical knowledge requirement to operate a private cloud could be a barrier for small and medium organizations. Small or medium organizations very often outsource their IT to local providers to focus on their core business. The local providers may operate private cloud solution but they are often not software development shops failing to deliver an equivalent user experience.
-
-Cost cutting may be considered by organizations as a key element in their decision to move to cloud but it is most of the time not a valid argument, because in most of the situations, not all costs are taken into account during the cost analysis phase. The pay as go payment method makes difficult to estimate up front what will be the real price and most of the time the costs get higher at the end. 
+The alternative to public and hybrid cloud could be private cloud but the technical knowledge requirement to operate a private cloud could be a barrier for individuals and small organizations. They very often outsource their IT to local providers to focus on their core business. The local providers may operate private cloud solution but they are often not software development shops failing to deliver an equivalent user experience.
 
 One of the main key benefit of cloud computing and the pay as you go payment method is definitely the scalability and the ability to scale up or down the resources without buying extra hardware.
 
-At [April Software](https://www.aprilsoftware.com/), we believe in private cloud and we understand the difficulties to operate private cloud solutions. We believe that there is a room to minimize the entry price to private cloud and that there is a room to improve the user experience for small and medium organizations.
+At [April Software](https://www.aprilsoftware.com/), we believe in private cloud and we understand the difficulties to operate private cloud solutions. We believe that there is a room to minimize the entry price to private cloud and that there is a room to improve the user experience for small organizations.
 
 ## Personal Cloud
 The size of the organizations play definitely a role in the adoption of cloud computing. Individuals and small organizations have no choice than choosing public cloud scarifying eventually confidentiality. Private cloud is not an option for individuals and small organizations mainly because of cost. 
@@ -33,12 +31,12 @@ High availability means nearly no down time. Usually individuals and small organ
 
 Security cannot be scarified but the location of the cloud can give the possibility to do savings too. For instance the cloud hardware could be hosted on premise. This may sound like a step back but it depends on the degree of expertise required and the capacity of the organization to protect the physical access to the cloud physical hardware. Obviously the cloud hardware could be hosted in racks in a data center chosen by the organization. 
 
-Except if the pay as you go is a requirement (i.e. periodic demand), most of the small and medium organizations have stable needs. Flexibility and scalability can be achieved with a lower degree of immediacy.
+Except if the pay as you go is a requirement (i.e. periodic demand), most of the small organizations have stable needs. Flexibility and scalability can be achieved with a lower degree of immediacy.
 
 The level of expertise required plays also an important part in the cost and it can be mitigated with high automation which at the end of the day is software. 
 
 To the maximum extend, it should be as easy as plugging a box to the Internet and power it. It should be ready to use. More computing power could be added just by adding another box. We propose the terms Personal Cloud and Personal Cluster for the assemblage of such boxes.
 
 ## Conclusion
-We see an alternative to existing cloud offers which should focus mainly on small and medium sized organizations for which the data control, confidentiality, location and jurisdiction are keys. The software automation is the key to open the possibility to use such alternative.
+We see an alternative to existing cloud offers which should focus mainly on individuals and small organizations for which the data control, confidentiality, location and jurisdiction are keys. The software automation is the key to open the possibility to use such alternative.
  
