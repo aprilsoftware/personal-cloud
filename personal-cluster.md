@@ -51,7 +51,7 @@ The 4 disks of each node will form 4 types of volumes:
 All disk are encrypted except the disk used by the Operating System. 
 
 ## Backup
-BorgBackup lets you save a lot of space using deduplication. You could run daily backup and keep a year of history of all VM disks on reasonable disk space.
+BorgBackup lets you save a lot of space using data deduplication. You could run daily backup and keep a year of history of all VM disks on reasonable disk space.
 
 GlusterFS allows you to snapshot an entire volume which can be helpfull backuping up VMs at once. 
 
