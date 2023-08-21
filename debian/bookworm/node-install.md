@@ -1,6 +1,7 @@
 # Cluster
 
-> Debian Bookworm
+Install 3 hosts with Debian Bookworm
+
 >
 > node1.local | node1.example.com | 192.168.0.50
 >
@@ -8,6 +9,7 @@
 >
 > node3.local | node3.example.com | 192.168.0.52
 
+<p/>
 ***Repeat the procedure for each node***
 
 ## Networks
