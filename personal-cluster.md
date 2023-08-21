@@ -39,23 +39,23 @@ We selected the following components to fulfill our requirements:
 ![Network](network/network.png)
 
 ## VLAN
-With the help of Open vSwitch and OPNsense you can create as many [VLAN](https://en.wikipedia.org/wiki/VLAN) as you want. You L2 switch should support VLAN tagging.
+You can create as many [VLAN](https://en.wikipedia.org/wiki/VLAN) as you want using Open vSwitch and OPNsense. Your L2 switch should support VLAN tagging.
 
 ## Storage
+The 4 disks of each node will form 4 types of volumes:
+- A disk for the Operating System
+- A GlusterFS volume to store VM disks (gv0)
+- A glusterFS volume to store backup (gv1)
+- A disk for barre metal VM disks such as VM running Ceph on Kubernetes (bmv0)
 
-4 drives, 3 encrypted, os not encrypted
-
-tang for
-
---GlusterFS Volume vs Barre Metal Volume
-
-barre metal volume help full to run ceph on top of Kubernetes
-bmv0
-gv0 and gv1
+All disk are encrypted except the disk used by the Operating System. 
 
 ## Backup
+BorgBackup lets you save a lot of space using deduplication. You could run daily backup and keep a year of history of all VM disks on reasonable disk space.
 
+GlusterFS allows you to snapshot an entire volume which can be helpfull backuping up VMs at once. 
 
-[Install Nodes](debian/bookworm/node-install.md)
+## Install
+[Install your first nodes](debian/bookworm/node-install.md)
 
 
