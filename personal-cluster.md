@@ -18,7 +18,7 @@ We identified a typical hardware requirements which could be tune on demand.
 - 3 network switches (L2)
 - a connection to internet
 
-This procedure can be easily adapted to run a cluster of [Raspberry Pi](https://www.raspberrypi.org/). We managed to run a cluster on 3 Raspberry Pi with limited network capabilities (for instance no routing / firewall capabilites).
+This procedure can be easily adapted to run a cluster of [Raspberry Pi](https://www.raspberrypi.org/). We managed to run a cluster on 3 Raspberry Pi with limited network capabilities (for instance no routing / no firewall capabilites).
 
 ## Components
 We selected the following components to fulfill our requirements:
