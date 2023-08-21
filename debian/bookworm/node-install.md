@@ -388,9 +388,9 @@ clevis luks bind -d /dev/sdc tang '{"url":"http://192.168.0.2"}'
 
 ## Hosts
 
-```
 Add all hosts in /etc/hosts file
 
+```
 192.168.0.50   node1.local    node1
 192.168.0.51   node2.local    node2
 192.168.0.52   node3.local    node3
@@ -567,8 +567,8 @@ volume set gv1 server.ssl on
 ```
 vi /etc/glusterfs/glusterd.vol
 ```
-
-> Add
+Add
+> 
 >
 > option rpc-auth-allow-insecure on
 
