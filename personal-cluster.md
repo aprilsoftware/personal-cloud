@@ -25,12 +25,12 @@ We selected the following components to fulfill our requirements:
 
 | Component | Feature |
 | --- | --- |
-| [KVM](https://www.linux-kvm.org/page/Main_Page) / [libvirt](https://libvirt.org/) / [virt-manager](https://virt-manager.org/) | test
-| [GlusterFS](https://www.gluster.org/) | test 
-| [clevis](https://github.com/latchset/clevis) / [luks](https://gitlab.com/cryptsetup/cryptsetup) / [tang](https://github.com/latchset/tang) | test
-| [Open vSwitch](https://www.openvswitch.org/) / [OPNsense](https://opnsense.org/) | test
-| [BorgBackup](https://www.borgbackup.org/) | test
-| [Prometeus](https://prometheus.io/) | tes
+| [KVM](https://www.linux-kvm.org/page/Main_Page) / [libvirt](https://libvirt.org/) / [virt-manager](https://virt-manager.org/) | Hypervisor
+| [GlusterFS](https://www.gluster.org/) | Software-defined storage & Scale out storage
+| [clevis](https://github.com/latchset/clevis) / [luks](https://gitlab.com/cryptsetup/cryptsetup) / [tang](https://github.com/latchset/tang) | Disk Encryption
+| [Open vSwitch](https://www.openvswitch.org/) / [OPNsense](https://opnsense.org/) | Software-defined networking
+| [BorgBackup](https://www.borgbackup.org/) | Data deduplication backup
+| [Prometeus](https://prometheus.io/) | Telemetry
 
 
 ## Network
