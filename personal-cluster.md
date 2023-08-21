@@ -37,7 +37,7 @@ We selected the following components to fulfill our requirements:
 
 ## Network
 
-
+![Network](network/network.png)
 
 
 ## VLAN
