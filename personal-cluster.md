@@ -36,12 +36,10 @@ We selected the following components to fulfill our requirements:
 
 
 ## Network
-
 ![Network](network/network.png)
 
-
 ## VLAN
-
+With the help of Open vSwitch and OPNsense you can create as many [VLAN](https://en.wikipedia.org/wiki/VLAN) as you want. You L2 switch should support VLAN tagging.
 
 ## Storage
 
