@@ -659,12 +659,12 @@ cd /etc/libvirt/qemu/networks
 vi br0.xml
 ```
 
-> <network>
-> <name>br0</name>
-> <forward mode='bridge'/>
-> <bridge name='br0'/>
-> <virtualport type='openvswitch'/>
-> </network>
+    <network>
+      <name>br0</name>
+      <forward mode='bridge'/>
+      <bridge name='br0'/>
+      <virtualport type='openvswitch'/>
+    </network>
 
 ```
 virsh net-define br0.xml
@@ -682,12 +682,12 @@ virsh net-autostart br0
 vi lab1-2.xml
 ```
 
-> <network>
-> <name>lab1-2</name>
-> <forward mode='bridge'/>
-> <bridge name='lab1-2'/>
-> <virtualport type='openvswitch'/>
-> </network>
+    <network>
+      <name>lab1-2</name>
+      <forward mode='bridge'/>
+      <bridge name='lab1-2'/>
+      <virtualport type='openvswitch'/>
+    </network>
 
 ```
 virsh net-define lab1-2.xml
@@ -703,12 +703,12 @@ virsh net-autostart lab1-2
 
 
 
-> <network>
-> <name>wan0</name>
-> <forward mode='bridge'/>
-> <bridge name='wan0'/>
-> <virtualport type='openvswitch'/>
-> </network>
+    <network>
+      <name>wan0</name>
+      <forward mode='bridge'/>
+      <bridge name='wan0'/>
+      <virtualport type='openvswitch'/>
+    </network>
 
 ```
 virsh net-define wan0.xml
