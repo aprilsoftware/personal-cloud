@@ -23,6 +23,8 @@ This procedure can be easily adapted to run a cluster of [Raspberry Pi](https://
 ## Components
 We selected the following components to fulfill our requirements:
 
+| Component | Feature |
+| --- | --- |
 | [KVM](https://www.linux-kvm.org/page/Main_Page) / [libvirt](https://libvirt.org/) / [virt-manager](https://virt-manager.org/) | test
 | [GlusterFS](https://www.gluster.org/) | test 
 | [clevis](https://github.com/latchset/clevis) / [luks](https://gitlab.com/cryptsetup/cryptsetup) / [tang](https://github.com/latchset/tang) | test
