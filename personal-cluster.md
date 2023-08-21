@@ -15,7 +15,7 @@ We wanted to have several features available from day one:
 We identified a typical hardware requirements which could be tune on demand.
 
 - 3 regular PC with at least 4 hard drives / SSD and 3 network interfaces
-- 3 network switches
+- 3 network switches (L2)
 - a connection to internet
 
 This procedure can be easily adapted to run a cluster of [Raspberry Pi](https://www.raspberrypi.org/). We managed to run a cluster on 3 Raspberry Pi with limited network capabilities (for instance no routing / firewall capabilites).
@@ -24,7 +24,7 @@ This procedure can be easily adapted to run a cluster of [Raspberry Pi](https://
 We selected the following components to fulfill our requirements:
 - [KVM](https://www.linux-kvm.org/page/Main_Page) / [libvirt](https://libvirt.org/) / [virt-manager](https://virt-manager.org/)
 - [GlusterFS](https://www.gluster.org/)
-- [clevis](https://github.com/latchset/clevis) / [luks](https://gitlab.com/cryptsetup/cryptsetup)
+- [clevis](https://github.com/latchset/clevis) / [luks](https://gitlab.com/cryptsetup/cryptsetup) / [tang](https://github.com/latchset/tang)
 - [Open vSwitch](https://www.openvswitch.org/) / [OPNsense](https://opnsense.org/)
 - [BorgBackup](https://www.borgbackup.org/)
 - [Prometeus](https://prometheus.io/)
@@ -39,12 +39,17 @@ We selected the following components to fulfill our requirements:
 
 ## Storage
 
+4 drives, 3 encrypted, os not encrypted
+
+tang for
 
 --GlusterFS Volume vs Barre Metal Volume
 
 barre metal volume help full to run ceph on top of Kubernetes
 bmv0
 gv0 and gv1
+
+## Backup
 
 
 [Install Nodes](debian/bookworm/node-install.md)
