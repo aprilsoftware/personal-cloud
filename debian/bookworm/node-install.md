@@ -1,4 +1,4 @@
-# Cluster
+# Install Nodes
 
 Install 3 hosts with Debian Bookworm
 
