@@ -18,20 +18,23 @@ apt install avahi-daemon
 vi /etc/network/interfaces
 ```
 
-> iface enp9s0f0 inet static  
-> address 192.168.0.50  
-> netmask 255.255.255.0  
-> gateway 192.168.0.1
->
-> allow-hotplug enp9s0f1  
-> iface enp9s0f1 inet manual
->
-> allow-hotplug enp7s0  
-> iface enp7s0 inet manual
->
-> allow-hotplug enp8s0  
-> iface enp8s0 inet manual
+Add
 
+```
+iface enp9s0f0 inet static  
+address 192.168.0.50  
+netmask 255.255.255.0  
+gateway 192.168.0.1
+
+allow-hotplug enp9s0f1  
+iface enp9s0f1 inet manual
+
+allow-hotplug enp7s0  
+iface enp7s0 inet manual
+
+allow-hotplug enp8s0  
+iface enp8s0 inet manual
+```
 
 ## libvirt
 
@@ -44,8 +47,8 @@ apt install qemu-system libvirt-daemon-system
 vi /etc/libvirt/qemu.conf
 ```
 
-> update
->
+update
+
 > security_driver = "none"
 
 ## admin
