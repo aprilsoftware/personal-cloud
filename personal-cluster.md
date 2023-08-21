@@ -18,12 +18,14 @@ We identified a typical hardware requirements which could be tune on demand.
 - 3 network switches
 - a connection to internet
 
+This procedure can be easily adapted to run a cluster of [Raspberry Pi](https://www.raspberrypi.org/). We managed to run a cluster on 3 Raspberry Pi with limited network capabilities (for instance no routing / firewall capabilites).
+
 ## Components
 We selected the following components to fulfill our requirements:
 - [KVM](https://www.linux-kvm.org/page/Main_Page) / [libvirt](https://libvirt.org/) / [virt-manager](https://virt-manager.org/)
 - [GlusterFS](https://www.gluster.org/)
-- [clevis](https://github.com/latchset/clevis)[luks](https://gitlab.com/cryptsetup/cryptsetup)
-- [Open vSwitch](https://www.openvswitch.org/)
+- [clevis](https://github.com/latchset/clevis) / [luks](https://gitlab.com/cryptsetup/cryptsetup)
+- [Open vSwitch](https://www.openvswitch.org/) / [OPNsense](https://opnsense.org/)
 - [BorgBackup](https://www.borgbackup.org/)
 - [Prometeus](https://prometheus.io/)
 
