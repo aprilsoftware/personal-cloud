@@ -8,7 +8,7 @@
 >
 > node3.local | node3.example.com | 192.168.0.52
 
-***Repeate the procedure for each node***
+***Repeat the procedure for each node***
 
 ## Networks
 
