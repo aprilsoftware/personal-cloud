@@ -10,6 +10,8 @@ We wanted to have several features available from day one:
 - [Data deduplication](https://en.wikipedia.org/wiki/Data_deduplication) backup
 - Telemetry
 
+resulting in a [hyper converged architecture](https://en.wikipedia.org/wiki/Hyper-converged_infrastructure).
+
 ## Hardware requirements
 
 We identified a typical hardware requirements which could be tune on demand.
