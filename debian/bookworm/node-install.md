@@ -580,15 +580,15 @@ volume set gv0 client.ssl on
 ```
 
 ```
-volume set gv1 client.ssl on
+gluster volume set gv1 client.ssl on
 ```
 
 ```
-volume set gv0 server.ssl on
+gluster volume set gv0 server.ssl on
 ```
 
 ```
-volume set gv1 server.ssl on
+gluster volume set gv1 server.ssl on
 ```
 
 **On each node**
