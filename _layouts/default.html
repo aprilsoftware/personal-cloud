@@ -33,6 +33,26 @@
               <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
             </section>
           {% endif %}
+
+          <ol class="breadcrumb">
+            {% for crumb in site.data.breadcrumbs %}
+              {% assign url_prefix = page.url | slice: 0, crumb.url.size %}
+              {% if (url_prefix == crumb.url) and (page.url != crumb.url) %}
+                <li class="breadcrumb-item">
+                  <a href="{{ crumb.url | prepend: site.baseurl }}">
+                    {{ crumb.title }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+            <li class="breadcrumb-item active">
+              <a  href="{{ page.url | prepend: site.baseurl }}">
+                {{ page.title }}
+              </a>
+            </li>
+          </ol>
+          
+
         </header>
     </div>
 
