@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+.navigation a {
+    color: white;
+}
+
 .navigation a:link {
     color: white;
 }
