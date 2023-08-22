@@ -7,7 +7,7 @@ node2.local | node2.example.com | 192.168.0.51
 node3.local | node3.example.com | 192.168.0.52
 
 <p/>
-***Repeat the procedure for each node***
+**Repeat the procedure for each node**
 
 ## Networks
 
@@ -418,16 +418,33 @@ systemctl enable glusterd
 systemctl start glusterd
 ```
 
-Execute the folowwing commands on only one node
+**On one node**
 
 ```
 gluster peer probe node2.local
+```
+
+```
 gluster peer probe node3.local
+```
+
+```
 gluster volume create gv0 replica 3 node{1..3}.local:/data/glusterfs/gv0/brick1/brick
+```
+
+```
 gluster volume create gv1 replica 3 node{1..3}.local:/data/glusterfs/gv1/brick1/brick node{1..3}.local:/data/glusterfs/gv1/brick2/brick
+```
+
+```
 gluster volume start gv0
+```
+
+```
 gluster volume start gv1
 ```
+
+**On each node**
 
 ```
 mkdir /mnt/gv0
@@ -455,33 +472,48 @@ cd /etc/ssl/
 openssl genrsa -out glusterfs.key 2048
 ```
 
+**On node1**
+
 ```
 openssl req -new -x509 -days 3650 -key glusterfs.key -subj "/CN=node1.local" -out glusterfs.pem
 ```
+
+**On node2**
 
 ```
 openssl req -new -x509 -days 3650 -key glusterfs.key -subj "/CN=node2.local" -out glusterfs.pem
 ```
 
+**On node3**
 ```
 openssl req -new -x509 -days 3650 -key glusterfs.key -subj "/CN=node3.local" -out glusterfs.pem
 ```
+
+**On one node**
 
 ```
 mkdir -p /mnt/gv0/certificates
 ```
 
+**On node1**
+
 ```
 cp glusterfs.pem /mnt/gv0/certificates/node1.local.pem
 ```
+
+**On node2**
 
 ```
 cp glusterfs.pem /mnt/gv0/certificates/node2.local.pem
 ```
 
+**On node3**
+
 ```
 cp glusterfs.pem /mnt/gv0/certificates/node3.local.pem
 ```
+
+**On one node**
 
 ```
 cd /mnt/gv0/certificates
@@ -490,6 +522,8 @@ cd /mnt/gv0/certificates
 ```
 cat node1.local.pem node2.local.pem node3.local.pem > glusterfs.ca
 ```
+
+**On each node**
 
 ```
 cd /etc/ssl
@@ -523,6 +557,8 @@ ln -s /etc/ssl/glusterfs.key glusterfs.key
 echo "option transport.socket.ssl-cert-depth 1" >  /var/lib/glusterd/secure-access
 ```
 
+**On one node**
+
 ```
 gluster volume stop gv0
 ```
@@ -555,6 +591,8 @@ volume set gv0 server.ssl on
 volume set gv1 server.ssl on
 ```
 
+**On each node**
+
 ```
 vi /etc/glusterfs/glusterd.vol
 ```
@@ -562,6 +600,8 @@ Add
 > 
 >
 > option rpc-auth-allow-insecure on
+
+**On one node**
 
 ```
 gluster volume set gv0 server.allow-insecure on
@@ -595,9 +635,13 @@ gluster volume set gv0 features.shard enable
 gluster volume set gv1 features.shard enable
 ```
 
+**On each node**
+
 ```
 reboot
 ```
+
+**On one node**
 
 ```
 volume start gv0
@@ -608,6 +652,8 @@ volume start gv1
 ```
 
 ## SDN
+
+**On each node**
 
 ```
 apt install openvswitch-switch
