@@ -2,12 +2,9 @@
 
 Install 3 hosts with Debian Bookworm
 
->
-> node1.local | node1.example.com | 192.168.0.50
->
-> node2.local | node2.example.com | 192.168.0.51
->
-> node3.local | node3.example.com | 192.168.0.52
+node1.local | node1.example.com | 192.168.0.50
+node2.local | node2.example.com | 192.168.0.51
+node3.local | node3.example.com | 192.168.0.52
 
 <p/>
 ***Repeat the procedure for each node***
@@ -421,27 +418,14 @@ systemctl enable glusterd
 systemctl start glusterd
 ```
 
+Execute the folowwing commands on only one node
+
 ```
 gluster peer probe node2.local
-```
-
-```
 gluster peer probe node3.local
-```
-
-```
 gluster volume create gv0 replica 3 node{1..3}.local:/data/glusterfs/gv0/brick1/brick
-```
-
-```
 gluster volume create gv1 replica 3 node{1..3}.local:/data/glusterfs/gv1/brick1/brick node{1..3}.local:/data/glusterfs/gv1/brick2/brick
-```
-
-```
 gluster volume start gv0
-```
-
-```
 gluster volume start gv1
 ```
 
