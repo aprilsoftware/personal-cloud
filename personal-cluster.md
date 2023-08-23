@@ -1,7 +1,7 @@
 # Personal Cluster
 
 We tried many options such as using Ceph when we designed our clusters and we end up with the following design. 
-One key element in our selection was to remain independent of any commercial products. We strongly believe in free software and we had limited resources at the begining. Another key element was the robustness.
+One key element in our selection was to remain independent of any commercial products. We strongly believe in free software. Another key element was the robustness.
 
 We wanted to have several features available from day one:
 - [Hypervisor](https://en.wikipedia.org/wiki/Hypervisor)
