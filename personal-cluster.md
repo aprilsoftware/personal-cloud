@@ -57,6 +57,6 @@ BorgBackup lets you save a lot of space using data deduplication. You could run 
 GlusterFS allows you to snapshot an entire volume which can be helpfull backuping up VMs at once. 
 
 ## Install
-[Install your first nodes](debian/bookworm/node-install.md)
+[Install your first nodes](debian/bookworm/cluster-nodes.md)
 
 
