@@ -1,7 +1,7 @@
-# Services tested on:
+# Software tested on:
 
 ## Bullseye
-- [Active Direcory](debian/bullseye/active-directory/service.md)
+- [Samba as an Active Directory](debian/bullseye/active-directory/software.md)
 - BorgBackup
 - Email (Postfix + Dovecot)
 - Guacamole
