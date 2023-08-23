@@ -10,7 +10,7 @@ We selected [Debian](https://www.debian.org/) as operating system. There are ver
 
 We selected [GlusterFS](https://www.gluster.org/) for the storage, for its simplicity and its reliability. 
 
-The first brick of the infrastructure is what we called a Personal Cluster (Here also as a reference to PC, the three PC acronyms being a different layer of abstraction). A Personal Cluster takes care of VMs and their Storage in a high availability way. From there we deploy Kubernetes Clusters and cloud services.
+The first brick of the infrastructure is what we called a [Personal Cluster](personal-cluster.md) (Here also as a reference to PC, the three PC acronyms being a different layer of abstraction). A Personal Cluster takes care of VMs and their Storage in a high availability way. From there we deploy Kubernetes Clusters and cloud services.
 
 Building a cluster requires you to have several computers available. The minimum is 2 and the more is the better. However the number of computers follows the rules given by GlusterFS. Depending on the number of replica you would like to keep, it should be a multiple of it. For instance, you could have a cluster or 2, 4, 6, x nodes storing 2 replicas or most probably 3, 6, 9, x storing 3 replicas (to avoid Split-Brains).
 
