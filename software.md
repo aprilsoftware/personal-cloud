@@ -1,6 +1,6 @@
 # Software tested on:
 
-## Bullseye
+## Debian Bullseye
 - [Samba as an Active Directory](debian/bullseye/active-directory/software.md)
 - BorgBackup
 - Email (Postfix + Dovecot)
@@ -15,7 +15,7 @@
 - vmdb2
 - Wireguard
 
-## Bookworm
+## Debian Bookworm
 - Samba as an Active Directory
 - BorgBackup
 - Email (Postfix + Dovecot)
