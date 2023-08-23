@@ -16,6 +16,7 @@
 - Wireguard
 
 ## Bookworm
+- Samba as an Active Directory
 - BorgBackup
 - Email (Postfix + Dovecot)
 - Guacamole
