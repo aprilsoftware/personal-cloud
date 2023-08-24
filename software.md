@@ -11,7 +11,7 @@
 - PKI (Public Key Infrastructure)
 - Prometheus
 - rclone
-- Tang
+- [tang](debian/bullseye/tang/software.md)
 - vmdb2
 - Wireguard
 
@@ -26,6 +26,6 @@
 - PKI (Public Key Infrastructure)
 - Prometheus
 - rclone
-- Tang
+- [tang](debian/bookworm/tang/software.md)
 - vmdb2
 - Wireguard
