@@ -18,7 +18,7 @@ resulting in a [hyper converged architecture](https://en.wikipedia.org/wiki/Hype
 We identified a typical hardware requirements which could be tune on demand.
 
 - 3 regular PC with at least 4 hard drives / SSD and 3 network interfaces
-- 3 network switches (L2)
+- 3 network switches (L2): One 10 Gb and two 1 Gb
 - a connection to internet
 - A Rapsberry Pi or a NUC to run a [tang](https://github.com/latchset/tang) server
 
@@ -39,6 +39,9 @@ We selected the following components to fulfill our requirements:
 
 ## Network
 ![Network](network/network.png)
+
+Switch 1: 10 Gb
+Switch 2 and 3: 1 Gb
 
 ## VLAN
 You can create as many [VLAN](https://en.wikipedia.org/wiki/VLAN) as you want using Open vSwitch and OPNsense. Your L2 switch should support VLAN tagging.
