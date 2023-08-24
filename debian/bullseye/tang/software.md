@@ -1,4 +1,4 @@
-# Install tang
+# Install [tang](https://github.com/latchset/tang)
 
     apt install tang
 
