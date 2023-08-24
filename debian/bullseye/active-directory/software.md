@@ -31,12 +31,13 @@
     vi /etc/resolv.conf
 > nameserver 192.168.0.101
 
-samba-tool dns zonecreate example.com 0.168.192.in-addr.arpa -U Administrator
+    samba-tool dns zonecreate example.com 0.168.192.in-addr.arpa -U Administrator
 
-samba-tool dns add 192.168.0.101 2.168.192.in-addr.arpa 1 PTR dc1.example.com -U Administrator
+    samba-tool dns add 192.168.0.101 2.168.192.in-addr.arpa 1 PTR dc1.example.com -U Administrator
 
-systemctl stop samba-ad-dc
-systemctl start samba-ad-dc
+    systemctl stop samba-ad-dc
+
+    systemctl start samba-ad-dc
 
 
 # Optional Feature for Windows 11
