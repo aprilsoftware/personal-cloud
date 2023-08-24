@@ -6,7 +6,6 @@ node1.local | node1.example.com | 192.168.0.50
 node2.local | node2.example.com | 192.168.0.51
 node3.local | node3.example.com | 192.168.0.52
 
-<p/>
 **Repeat the procedure for each node**
 
 ## Networks
@@ -50,7 +49,9 @@ vi /etc/libvirt/qemu.conf
 
 update
 
-> security_driver = "none"
+```
+security_driver = "none"
+```
 
 ## admin
 
@@ -599,9 +600,10 @@ gluster volume set gv1 server.ssl on
 vi /etc/glusterfs/glusterd.vol
 ```
 Add
-> 
->
-> option rpc-auth-allow-insecure on
+
+```
+option rpc-auth-allow-insecure on
+```
 
 **On one node**
 
@@ -721,12 +723,14 @@ virsh net-autostart br0
 vi lab1-2.xml
 ```
 
-    <network>
-      <name>lab1-2</name>
-      <forward mode='bridge'/>
-      <bridge name='lab1-2'/>
-      <virtualport type='openvswitch'/>
-    </network>
+```
+<network>
+  <name>lab1-2</name>
+  <forward mode='bridge'/>
+  <bridge name='lab1-2'/>
+  <virtualport type='openvswitch'/>
+</network>
+```
 
 ```
 virsh net-define lab1-2.xml
@@ -740,14 +744,18 @@ virsh net-start lab1-2
 virsh net-autostart lab1-2
 ```
 
+```
+vi wan0.xml
+```
 
-
-    <network>
-      <name>wan0</name>
-      <forward mode='bridge'/>
-      <bridge name='wan0'/>
-      <virtualport type='openvswitch'/>
-    </network>
+```
+<network>
+  <name>wan0</name>
+  <forward mode='bridge'/>
+  <bridge name='wan0'/>
+  <virtualport type='openvswitch'/>
+</network>
+```
 
 ```
 virsh net-define wan0.xml
