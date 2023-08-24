@@ -41,6 +41,7 @@ We selected the following components to fulfill our requirements:
 ![Network](network/network.png)
 
 > Switch 1: 10 Gb
+
 > Switch 2 and 3: 1 Gb
 
 ## VLAN
