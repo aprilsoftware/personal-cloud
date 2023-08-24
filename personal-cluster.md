@@ -40,9 +40,8 @@ We selected the following components to fulfill our requirements:
 ## Network
 ![Network](network/network.png)
 
-> Switch 1: 10 Gb
-
-> Switch 2 and 3: 1 Gb
+- Switch 1: 10 Gb
+- Switch 2 and 3: 1 Gb
 
 ## VLAN
 You can create as many [VLAN](https://en.wikipedia.org/wiki/VLAN) as you want using Open vSwitch and OPNsense. Your L2 switch should support VLAN tagging.
