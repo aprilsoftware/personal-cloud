@@ -1,4 +1,4 @@
-# Howto tested on:
+# How-To tested on:
 
 ## Debian Bullseye
 - [Samba as an Active Directory](debian/bullseye/active-directory/howto.md)
