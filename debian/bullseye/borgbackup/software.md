@@ -22,7 +22,7 @@ borg init --encryption=none /mnt/gv1/backup/daily
 borg list /mnt/gv1/backup/daily
 ```
 
-# Restore an image at the current location
+# Restore a file
 
 ```
 borg extract /mnt/gv1/backup/daily:DAILY_2023-04-02 mnt/snapshots/gv0/vm/net0.test.img
