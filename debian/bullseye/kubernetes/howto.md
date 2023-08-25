@@ -310,7 +310,7 @@ ceph status
 ceph osd status
 ```
 
-## cert-manager
+## [cert-manager](https://cert-manager.io/)
 ```
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.0/cert-manager.yaml
 ```
