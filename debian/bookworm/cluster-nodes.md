@@ -193,7 +193,7 @@ echo "nvme1n1_crypt /dev/nvme1n1 none luks,discard"  >> /etc/crypttab
 echo "/dev/mapper/gv0_brick1-brick1 /data/glusterfs/gv0/brick1 xfs _netdev,inode64,noatime 0 0"  >> /etc/fstab
 ```
 
-**Install [tang](tang/software.md) to provide automatically at boot level the passphrase to luks.**
+**Install [tang](tang/howto.md) to provide automatically at boot level the passphrase to luks.**
 
 ```
 clevis luks bind -d /dev/nvme1n1 tang '{"url":"http://192.168.0.2"}'

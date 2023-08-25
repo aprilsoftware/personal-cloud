@@ -497,7 +497,7 @@ vi s3-example-com-cert.yaml
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: s3-doc1-aprilsoftware-com-cert
+  name: s3-example-com-cert
   namespace: rook-ceph
 spec:
   commonName: s3-example-com-cert
