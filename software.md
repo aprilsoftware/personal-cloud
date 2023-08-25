@@ -6,7 +6,7 @@
 - Email (Postfix + Dovecot)
 - Guacamole
 - HAProxy
-- Kubernetes
+- [Kubernetes](debian/bullseye/kubernetes/software.md)
 - Nextcloud
 - PKI (Public Key Infrastructure)
 - Prometheus
@@ -21,7 +21,7 @@
 - Email (Postfix + Dovecot)
 - Guacamole
 - HAProxy
-- Kubernetes
+- [Kubernetes](debian/bookworm/kubernetes/software.md)
 - Nextcloud
 - PKI (Public Key Infrastructure)
 - Prometheus
