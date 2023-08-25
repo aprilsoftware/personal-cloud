@@ -245,7 +245,7 @@ helm install haproxy-ingress haproxy-ingress/haproxy-ingress\
 apt install lvm2 ntp
 ```
 
-**On master node**
+**On the master node**
 ```
 apt install git
 ```
