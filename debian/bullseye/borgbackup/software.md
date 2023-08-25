@@ -36,5 +36,5 @@ borg delete /mnt/gv1/backup/vm::DAILY_2023-04-02
 
 # Backup script
 
-[Daily VM images backup script](https://github.com/aprilsoftware/personal-cloud/debian/bullseye/borgbackup/daily.backup.sh) (GlusterFS snapshot)
+[Daily VM images backup script](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/borgbackup/daily.backup.sh) (GlusterFS snapshot)
 
