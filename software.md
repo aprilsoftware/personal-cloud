@@ -2,7 +2,7 @@
 
 ## Debian Bullseye
 - [Samba as an Active Directory](debian/bullseye/active-directory/software.md)
-- BorgBackup
+- [BorgBackup](debian/bullseye/borgbackup/software.md)
 - Email (Postfix + Dovecot)
 - Guacamole
 - HAProxy
@@ -17,7 +17,7 @@
 
 ## Debian Bookworm
 - Samba as an Active Directory
-- BorgBackup
+- [BorgBackup](debian/bookworm/borgbackup/software.md)
 - Email (Postfix + Dovecot)
 - Guacamole
 - HAProxy
