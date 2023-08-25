@@ -1,6 +1,7 @@
 # How-To tested on:
 
 ## Debian Bullseye
+- [Cluster Nodes](debian/bullseye/cluster-nodes/howto.md)
 - [Samba as an Active Directory](debian/bullseye/active-directory/howto.md)
 - [BorgBackup](debian/bullseye/borgbackup/howto.md)
 - Email (Postfix + Dovecot)
@@ -16,6 +17,7 @@
 - Wireguard
 
 ## Debian Bookworm
+- [Cluster Nodes](debian/bookworm/cluster-nodes/howto.md)
 - Samba as an Active Directory
 - [BorgBackup](debian/bookworm/borgbackup/howto.md)
 - Email (Postfix + Dovecot)
