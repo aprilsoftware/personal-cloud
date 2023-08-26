@@ -13,7 +13,7 @@
 - rclone
 - [tang](debian/bookworm/tang/howto.md)
 - vmdb2
-- Wireguard as a gateway
+- [Wireguard as a gateway](debian/bookworm/gateway/howto.md)
 
 ## Debian Bullseye
 - [Cluster Nodes](debian/bullseye/cluster-nodes/howto.md)
