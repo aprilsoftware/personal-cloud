@@ -8,7 +8,7 @@
 - Guacamole
 - [Kubernetes](debian/bookworm/kubernetes/howto.md)
 - Nextcloud
-- PKI (Public Key Infrastructure)
+- Public Key Infrastructure
 - Prometheus
 - rclone
 - [tang](debian/bookworm/tang/howto.md)
@@ -23,8 +23,8 @@
 - [Guacamole](debian/bullseye/guacamole/howto.md)
 - [Kubernetes](debian/bullseye/kubernetes/howto.md)
 - [Nextcloud](debian/bullseye/nextcloud/howto.md)
-- [PKI (Public Key Infrastructure](debian/bullseye/pki/howto.md)
-- [Prometheus)](debian/bullseye/prometheus/howto.md)
+- [Public Key Infrastructure](debian/bullseye/pki/howto.md)
+- [Prometheus](debian/bullseye/prometheus/howto.md)
 - rclone
 - [tang](debian/bullseye/tang/howto.md)
 - vmdb2

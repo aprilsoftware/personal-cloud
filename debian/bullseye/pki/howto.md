@@ -1,4 +1,4 @@
-# PKI ([step-certificate](https://github.com/smallstep/certificates))
+# Public Key Infrastructure - ([step-certificate](https://github.com/smallstep/certificates))
 ```
 apt install wget
 ```
