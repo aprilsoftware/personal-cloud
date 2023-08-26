@@ -1,0 +1,94 @@
+steps:
+  - mklabel: msdos
+    device: "{{ image }}"
+
+  - mkpart: primary
+    device: "{{ image }}"
+    start: 1M
+    end: 100%
+    tag: rootfs
+
+  - mkfs: ext4
+    partition: rootfs
+
+  - mount: rootfs
+
+  - unpack-rootfs: rootfs
+
+  - debootstrap: bullseye
+    mirror: http://deb.debian.org/debian
+    target: rootfs
+    unless: rootfs_unpacked
+
+  - apt: install
+    packages:
+      - linux-image-amd64
+      - locales
+      - sudo
+      - openssh-server
+      - python3
+      - ntp
+    tag: rootfs
+    unless: rootfs_unpacked
+
+  - cache-rootfs: rootfs
+    unless: rootfs_unpacked
+
+  - chroot: rootfs
+    shell: |
+      sed '/en_GB.UTF-8 UTF-8/s/^#//' -i /etc/locale.gen
+      locale-gen
+
+  - chroot: rootfs
+    shell: |
+      echo "root:$RANDOM-$RANDOM-$RANDOM-$RANDOM" | chpasswd
+
+  - create-file: /etc/network/interfaces.d/lo
+    perm: 0644
+    contents: |
+      auto lo
+      iface lo inet loopback
+
+  - create-file: /etc/network/interfaces.d/eth0
+    perm: 0644
+    contents: |
+      auto eth0
+      iface eth0 inet static
+             address {{ ip }}
+             netmask 255.255.255.0
+             gateway {{ gateway }}
+
+  - chroot: rootfs
+    shell: |
+      echo {{ ip }}'\t'{{ hostname }}.{{ domain }} {{ hostname }} >> /etc/hosts
+      echo {{ hostname }} > /etc/hostname
+
+  - chroot: rootfs
+    shell: |
+      mkdir -p /home/admin
+      useradd -d /home/admin -s /bin/bash admin ; echo 'admin:admin' | chpasswd
+      chown -R admin:admin /usr/local/admin
+      adduser admin sudo
+
+  - chroot: rootfs
+    shell: |
+      apt update
+
+  - grub: bios
+    tag: rootfs
+    image-dev: "{{ image }}"
+    console: serial
+
+  - chroot: rootfs
+    shell: |
+      rm -v /etc/ssh/ssh_host_*
+      dpkg-reconfigure openssh-server
+
+  - chroot: rootfs
+    shell: |
+      rm -f /etc/machine-id /var/lib/dbus/machine-id
+
+  - chroot: rootfs
+    shell: |
+      echo "domain {{ domain }}
+      nameserver {{ gateway }}" > /etc/resolv.conf

@@ -27,5 +27,5 @@
 - [Prometheus](debian/bullseye/prometheus/howto.md)
 - [rclone](debian/bullseye/rclone/howto.md)
 - [tang](debian/bullseye/tang/howto.md)
-- vmdb2
+- [vmdb2](debian/bullseye/vmdb2/howto.md)
 - Wireguard as a gateway
