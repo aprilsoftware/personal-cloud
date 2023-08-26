@@ -4,6 +4,15 @@
 apt install vmdb2
 ```
 
+```
+wget -O build_vm.py https://aprilsoftware.github.io/personal-cloud/debian/bullseye/vmdb2/build_vm.py
+```
+
+```
+wget -O deploy_vm.py https://aprilsoftware.github.io/personal-cloud/debian/bullseye/vmdb2/deploy_vm.py
+
+```
+
 ## Build an image
 ```
 TEMPLATE_ROOT_PATH=templates
@@ -21,6 +30,8 @@ python3 build_vm.py --build_name example.server1 \
         -o
 
 ```
+
+[Templates](https://github.com/aprilsoftware/personal-cloud/tree/main/debian/bullseye/vmdb2/templates)
 
 ## Deploy an image
 ```
