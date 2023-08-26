@@ -24,7 +24,7 @@
 - Guacamole
 - HAProxy
 - [Kubernetes](debian/bullseye/kubernetes/howto.md)
-- Nextcloud
+- [Nextcloud](debian/bullseye/nextcloud/howto.md)
 - PKI (Public Key Infrastructure)
 - Prometheus
 - rclone
