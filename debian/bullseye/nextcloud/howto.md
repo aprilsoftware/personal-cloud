@@ -1,4 +1,4 @@
-# Install NextCloud
+# Install Nextcloud
 ```
 apt install postgresql
 ```
