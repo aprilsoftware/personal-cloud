@@ -13,7 +13,7 @@
 - rclone
 - [tang](debian/bookworm/tang/howto.md)
 - vmdb2
-- Wireguard
+- Wireguard as a gateway
 
 ## Debian Bullseye
 - [Cluster Nodes](debian/bullseye/cluster-nodes/howto.md)
@@ -24,8 +24,8 @@
 - [Kubernetes](debian/bullseye/kubernetes/howto.md)
 - [Nextcloud](debian/bullseye/nextcloud/howto.md)
 - [PKI (Public Key Infrastructure)](debian/bullseye/pki/howto.md)
-- Prometheus
+- [Prometheus)](debian/bullseye/prometheus/howto.md)
 - rclone
 - [tang](debian/bullseye/tang/howto.md)
 - vmdb2
-- Wireguard
+- Wireguard as a gateway
