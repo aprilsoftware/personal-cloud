@@ -28,4 +28,4 @@
 - [rclone](debian/bullseye/rclone/howto.md)
 - [tang](debian/bullseye/tang/howto.md)
 - [vmdb2](debian/bullseye/vmdb2/howto.md)
-- Wireguard as a gateway
+- [Wireguard as a gateway](debian/bullseye/gateway/howto.md)
