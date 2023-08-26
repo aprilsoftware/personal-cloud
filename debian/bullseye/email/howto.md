@@ -36,15 +36,15 @@ apt install postfix-ldap
 ```
 
 ## Edit config files
-[Edit /etc/postfix/main.cf](postfix/main.cf)
+[Edit /etc/postfix/main.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/main.cf)
 
-[Edit /etc/postfix/master.cf](postfix/master.cf)
+[Edit /etc/postfix/master.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/master.cf)
 
-[Edit /etc/postfix/vmail/example_com_aliases.cf](postfix/vmail/example_com_aliases.cf)
+[Edit /etc/postfix/vmail/example_com_aliases.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/vmail/example_com_aliases.cf)
 
-[Edit /etc/postfix/vmail/example_com_auth.cf](postfix/vmail/example_com_auth.cf)
+[Edit /etc/postfix/vmail/example_com_auth.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/vmail/example_com_auth.cf)
 
-[Edit /etc/postfix/vmail/example_com_mailboxes.cf](postfix/vmail/example_com_mailboxes.cf)
+[Edit /etc/postfix/vmail/example_com_mailboxes.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/vmail/example_com_mailboxes.cf)
 
 ```
 groupadd -g 5000 vmail
@@ -160,9 +160,9 @@ ss -lnpt | grep dovecot
 apt install dovecot-ldap
 ```
 
-[Edit /etc/dovecot/conf.d/auth-ldap.conf.ext](dovecot/auth-ldap.conf.ext)
+[Edit /etc/dovecot/conf.d/auth-ldap.conf.ext](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/dovecot/auth-ldap.conf.ext)
 
-[Edit /etc/dovecot/dovecot-ldap.conf.ext](dovecot/dovecot-ldap.conf.ext)
+[Edit /etc/dovecot/dovecot-ldap.conf.ext](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/dovecot/dovecot-ldap.conf.ext)
 
 ```
 vi /etc/dovecot/conf.d/10-auth.conf
@@ -183,7 +183,7 @@ doveadm user user@example.com
 ```
 
 # HAProxy
-[Edit /etc/haproxy/haproxy.cfg](haproxy/haproxy.cfg)
+[Edit /etc/haproxy/haproxy.cfg](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/haproxy/haproxy.cfg)
 
 # SPF
 Add DNS entry
