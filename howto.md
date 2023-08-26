@@ -21,7 +21,7 @@
 - [Samba as an Active Directory](debian/bullseye/active-directory/howto.md)
 - [BorgBackup](debian/bullseye/borgbackup/howto.md)
 - [Email (Postfix + Dovecot)](debian/bullseye/email/howto.md)
-- Guacamole
+- [Guacamole](debian/bullseye/guacamole/howto.md)
 - HAProxy
 - [Kubernetes](debian/bullseye/kubernetes/howto.md)
 - [Nextcloud](debian/bullseye/nextcloud/howto.md)
