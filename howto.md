@@ -6,7 +6,6 @@
 - [BorgBackup](debian/bookworm/borgbackup/howto.md)
 - Email (Postfix + Dovecot)
 - Guacamole
-- HAProxy
 - [Kubernetes](debian/bookworm/kubernetes/howto.md)
 - Nextcloud
 - PKI (Public Key Infrastructure)
@@ -22,10 +21,9 @@
 - [BorgBackup](debian/bullseye/borgbackup/howto.md)
 - [Email (Postfix + Dovecot)](debian/bullseye/email/howto.md)
 - [Guacamole](debian/bullseye/guacamole/howto.md)
-- HAProxy
 - [Kubernetes](debian/bullseye/kubernetes/howto.md)
 - [Nextcloud](debian/bullseye/nextcloud/howto.md)
-- PKI (Public Key Infrastructure)
+- [PKI (Public Key Infrastructure)](debian/bullseye/pki/howto.md)
 - Prometheus
 - rclone
 - [tang](debian/bullseye/tang/howto.md)
