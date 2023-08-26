@@ -184,8 +184,7 @@ doveadm user user@example.com
 [Edit /etc/haproxy/haproxy.cfg](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/haproxy/haproxy.cfg)
 
 # SPF
-Add DNS entry
-
+## DNS
 ```
 example.com. 900 TXT "v=spf1 mx ~all"
 ```
@@ -352,7 +351,7 @@ non_smtpd_milters = $smtpd_milters
 ```
 
 # DMARC
-Add DNS entry
+## DNS
 ```
  _dmarc.example.com 900 TXT "v=DMARC1; p=none"
 ```
