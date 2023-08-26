@@ -172,3 +172,14 @@ vi /opt/nextcloud/www/lib/private/Installer.php
 ```
 timeout -> 500 instead of 120
 ```
+
+# Active Directory
+## Filter users
+```
+(&(|(objectclass=person))(|(|(memberof=CN=Nextcloud Users,CN=Users,DC=example,DC=com)(primaryGroupID=1111))))
+```
+
+## Login attributes
+```
+(&(&(|(objectclass=person)))(samaccountname=%uid))
+```

@@ -20,7 +20,7 @@
 - [Cluster Nodes](debian/bullseye/cluster-nodes/howto.md)
 - [Samba as an Active Directory](debian/bullseye/active-directory/howto.md)
 - [BorgBackup](debian/bullseye/borgbackup/howto.md)
-- Email (Postfix + Dovecot)
+- [Email (Postfix + Dovecot)](debian/bullseye/email/howto.md)
 - Guacamole
 - HAProxy
 - [Kubernetes](debian/bullseye/kubernetes/howto.md)
