@@ -37,6 +37,15 @@ example.com
 apt install postfix-ldap
 ```
 
+## vmail
+```
+groupadd -g 5000 vmail
+```
+
+```
+useradd -m -u 5000 -g 5000 -s /bin/false vmail
+```
+
 ## Edit config files
 [Edit /etc/postfix/main.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/main.cf)
 
@@ -47,16 +56,6 @@ apt install postfix-ldap
 [Edit /etc/postfix/vmail/example_com_auth.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/vmail/example_com_auth.cf)
 
 [Edit /etc/postfix/vmail/example_com_mailboxes.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/vmail/example_com_mailboxes.cf)
-
-## vmail
-
-```
-groupadd -g 5000 vmail
-```
-
-```
-useradd -m -u 5000 -g 5000 -s /bin/false vmail
-```
 
 ```
 postmap -q user@example.com ldap:/etc/postfix/vmail/example_com_aliases.cf
@@ -154,12 +153,7 @@ ssl_min_protocol = TLSv1.2
 adduser dovecot vmail
 ```
 
-## Check ports
-```
-ss -lnpt | grep dovecot
-```
-
-## LDAP Dovecot
+## LDAP
 ```
 apt install dovecot-ldap
 ```
@@ -541,6 +535,15 @@ systemctl restart dovecot
 
 ```
 systemctl restart spamass-milter
+```
+
+## Check ports
+```
+ss -lnpt | grep master
+```
+
+```
+ss -lnpt | grep dovecot
 ```
 
 # Test email
