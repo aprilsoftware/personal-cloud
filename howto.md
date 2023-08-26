@@ -25,7 +25,7 @@
 - [Nextcloud](debian/bullseye/nextcloud/howto.md)
 - [Public Key Infrastructure](debian/bullseye/pki/howto.md)
 - [Prometheus](debian/bullseye/prometheus/howto.md)
-- rclone
+- [rclone](debian/bullseye/rclone/howto.md)
 - [tang](debian/bullseye/tang/howto.md)
 - vmdb2
 - Wireguard as a gateway
