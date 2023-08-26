@@ -23,7 +23,7 @@
 - [Guacamole](debian/bullseye/guacamole/howto.md)
 - [Kubernetes](debian/bullseye/kubernetes/howto.md)
 - [Nextcloud](debian/bullseye/nextcloud/howto.md)
-- [PKI (Public Key Infrastructure)](debian/bullseye/pki/howto.md)
+- [PKI (Public Key Infrastructure](debian/bullseye/pki/howto.md)
 - [Prometheus)](debian/bullseye/prometheus/howto.md)
 - rclone
 - [tang](debian/bullseye/tang/howto.md)
