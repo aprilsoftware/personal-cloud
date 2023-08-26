@@ -48,6 +48,8 @@ apt install postfix-ldap
 
 [Edit /etc/postfix/vmail/example_com_mailboxes.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/vmail/example_com_mailboxes.cf)
 
+## vmail
+
 ```
 groupadd -g 5000 vmail
 ```
