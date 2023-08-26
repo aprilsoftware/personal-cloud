@@ -46,7 +46,6 @@ python3 deploy_vm.py --build_name example.server1 \
         --network br0 \
         --host admin@server1.example.com
 
-echo "Remove image"
 sudo rm ${BUILD_ROOT_PATH}/example.server1.img
 
 ```
