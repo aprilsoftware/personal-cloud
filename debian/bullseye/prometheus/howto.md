@@ -12,6 +12,11 @@ mkdir /var/lib/prometheus/node-exporter
 systemctl enable prometheus prometheus-node-exporter
 ```
 
+URL:
+```
+http://mon1.example.com:9090
+```
+
 ## On the clients
 ```
 apt install prometheus-node-exporter
@@ -23,11 +28,6 @@ systemctl enable prometheus-node-exporter
 
 ```
 apt install prometheus-libvirt-exporter
-```
-
-URL:
-```
-http://mon1.example.com:9090
 ```
 
 # [Grafana](https://grafana.com)
