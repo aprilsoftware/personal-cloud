@@ -36,7 +36,7 @@ sysctl --system
 ## [cri-o](https://cri-o.io/)
 
 ```
-OS=Debian_11
+OS=Debian_12
 VERSION=1.27
 ```
 
