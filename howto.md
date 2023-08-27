@@ -1,20 +1,5 @@
 # How-To tested on:
 
-## Debian Bookworm
-- [Cluster Nodes](debian/bookworm/cluster-nodes/howto.md)
-- Samba as an Active Directory
-- [BorgBackup](debian/bookworm/borgbackup/howto.md)
-- Email (Postfix + Dovecot)
-- Guacamole
-- [Kubernetes](debian/bookworm/kubernetes/howto.md)
-- Nextcloud
-- Public Key Infrastructure
-- Prometheus
-- rclone
-- [tang](debian/bookworm/tang/howto.md)
-- vmdb2
-- [Wireguard as a gateway](debian/bookworm/gateway/howto.md)
-
 ## Debian Bullseye
 - [Cluster Nodes](debian/bullseye/cluster-nodes/howto.md)
 - [Samba as an Active Directory](debian/bullseye/active-directory/howto.md)
@@ -29,3 +14,18 @@
 - [tang](debian/bullseye/tang/howto.md)
 - [vmdb2](debian/bullseye/vmdb2/howto.md)
 - [Wireguard as a gateway](debian/bullseye/gateway/howto.md)
+
+## Debian Bookworm
+- [Cluster Nodes](debian/bookworm/cluster-nodes/howto.md)
+- Samba as an Active Directory
+- [BorgBackup](debian/bookworm/borgbackup/howto.md)
+- Email (Postfix + Dovecot)
+- Guacamole
+- [Kubernetes](debian/bookworm/kubernetes/howto.md)
+- Nextcloud
+- Public Key Infrastructure
+- Prometheus
+- rclone
+- [tang](debian/bookworm/tang/howto.md)
+- vmdb2
+- [Wireguard as a gateway](debian/bookworm/gateway/howto.md)
