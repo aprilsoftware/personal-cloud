@@ -51,7 +51,7 @@ You can create as many [VLAN](https://en.wikipedia.org/wiki/VLAN) as you want us
 The 4 disks of each node will form 4 types of volumes:
 - A disk for the Operating System
 - A GlusterFS volume to store VM disks (gv0)
-- A glusterFS volume to store backup (gv1)
+- A GlusterFS volume to store backup (gv1)
 - A disk for barre metal VM disks such as VM running Ceph on Kubernetes (bmv0)
 
 All disk are encrypted except the disk used by the Operating System. 
