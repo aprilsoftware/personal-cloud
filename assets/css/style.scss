@@ -4,7 +4,6 @@
 @import "{{ site.theme }}";
 
 body {
-    background: #939598;
 }
 
 .inner {
@@ -20,7 +19,9 @@ body {
     color: white;
 }
 
-.navigation {
+.navigation p {
+    margin: 0px;
+    padding: 0px;
     text-transform: uppercase;
 }
 
