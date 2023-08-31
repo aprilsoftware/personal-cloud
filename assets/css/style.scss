@@ -3,6 +3,11 @@
 
 @import "{{ site.theme }}";
 
+body {
+    background: #000;
+  }
+  
+
 .inner {
     max-width: 800px;
 }
