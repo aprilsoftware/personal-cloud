@@ -28,8 +28,10 @@
 }
 
 .navigation li {
+    padding: 5px;
     text-align: center;
     text-transform: uppercase;
+    border-left: white 1 px;
 }
 
 .navigation a:link {
