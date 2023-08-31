@@ -20,9 +20,12 @@
     color: white;
 }
 
+.navigation ul {
+    display: flex;
+    align-items: center;
+}
+
 .navigation li {
-    margin: 0px;
-    padding: 5px;
     text-transform: uppercase;
 }
 
