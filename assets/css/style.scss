@@ -16,8 +16,6 @@
 }
 
 .navigation {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .navigation ul {
@@ -26,8 +24,7 @@
     margin: 0px;
     padding: 0px;
     list-style: none;
-    display: flex;
-    align-items: center;
+    display: inline-block;
 }
 
 .navigation li {
