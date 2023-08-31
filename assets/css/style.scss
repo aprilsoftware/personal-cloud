@@ -23,10 +23,13 @@
 
 .navigation ul {
     list-style: none;
-    float: right;
+    float: left;
 }
 
 .navigation li {
+    float: left;
+    vertical-align: middle;
+    text-align: center;
     text-transform: uppercase;
 }
 
