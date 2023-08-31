@@ -16,11 +16,12 @@
 }
 
 .navigation {
-    background-color: #f2f2f2;
+    text-align: center;
 }
 
 .navigation ul {
     background-color: #939598;
+    color: white;
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -29,14 +30,9 @@
 }
 
 .navigation li {
-    background-color: #939598;
-    color: white;
     padding: 5px;
     height: 80px;
-    text-align: center;
     text-transform: uppercase;
-    vertical-align: bottom;
-    border-right: 2px solid #f2f2f2;
 }
 
 .navigation a:link {
