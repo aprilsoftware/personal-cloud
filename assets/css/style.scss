@@ -9,7 +9,11 @@
 
 #forkme_banner {
     background: url('../images/blacktocat.png') #402986 no-repeat 95% 50%;
-  }
+}
+
+#main_content_wrap {
+    border-top: 0px;
+}
 
 .navigation {
     background-color: #939598;
@@ -17,7 +21,6 @@
 }
 
 .navigation p {
-    border: 0px;
     margin: 0px;
     padding: 5px;
     text-transform: uppercase;
