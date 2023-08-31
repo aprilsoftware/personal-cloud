@@ -16,12 +16,11 @@
 }
 
 .navigation {
-    background-color: #939598;
-    color: white;
 }
 
-
 .navigation ul {
+    background-color: #939598;
+    color: white;
     list-style: none;
     display: flex;
     align-items: center;
@@ -31,7 +30,7 @@
     padding: 5px;
     text-align: center;
     text-transform: uppercase;
-    border-left: white 1 px;
+    border-left: 2px solid #f2f2f2;
 }
 
 .navigation a:link {
