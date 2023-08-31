@@ -3,9 +3,6 @@
 
 @import "{{ site.theme }}";
 
-body {
-}
-
 .inner {
     max-width: 800px;
 }
@@ -21,7 +18,7 @@ body {
 
 .navigation p {
     margin: 0px;
-    padding: 0px;
+    padding: 5px;
     text-transform: uppercase;
 }
 
