@@ -19,19 +19,14 @@ a {
     border-top: 0px;
 }
 
-.navigation ul {
+.navigation {
     background-color: #939598;
     color: white;
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.navigation li {
-    padding: 5px;
+.navigation p {
+    margin: 0px;
+    padding: 0px;
     text-transform: uppercase;
 }
 
