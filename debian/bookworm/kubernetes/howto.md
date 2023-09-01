@@ -143,9 +143,12 @@ kubectl label node k8s1node4 node-role.kubernetes.io/worker=worker
 ```
 
 ## [antrea](https://antrea.io/)
+**On each node**
 ```
 apt install openvswitch-switch
 ```
+
+**On the master node**
 
 ```
 kubectl apply -f https://github.com/antrea-io/antrea/releases/download/v1.12.0/antrea.yml
