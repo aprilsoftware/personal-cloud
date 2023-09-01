@@ -43,8 +43,10 @@ We selected the following components to fulfill our requirements:
 ```
 Switch 1: 10 Gb
 Switch 2 and 3: 1 Gb
-You can run one or more OPNsense VM as router / firewall
 ```
+
+You can run one or more OPNsense VM as router / firewall.
+
 
 ## VLAN
 You can create as many [VLAN](https://en.wikipedia.org/wiki/VLAN) as you want using Open vSwitch and OPNsense. Your L2 switch should support VLAN tagging.
