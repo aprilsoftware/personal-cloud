@@ -1,6 +1,6 @@
 # Install Nodes
 
-Install Debian Bookworm on 3 hosts
+Install Debian Bullseye on 3 hosts
 
 node1.local | node1.example.com | 192.168.0.50
 node2.local | node2.example.com | 192.168.0.51
