@@ -1,3 +1,3 @@
-# Contribute
+# Where to get help
 
-You can <a href="https://docs.github.com/en/get-started/quickstart/contributing-to-projects">contribute</a> by forking the repository.
+If you have any question about the how-to, feel free to [Contact Us](mailto:contact@aprilsoftware.com).
