@@ -34,7 +34,7 @@ We selected the following components to fulfill our requirements:
 | [clevis](https://github.com/latchset/clevis) / [luks](https://gitlab.com/cryptsetup/cryptsetup) / [tang](https://github.com/latchset/tang) | Disk Encryption
 | [Open vSwitch](https://www.openvswitch.org/) / [OPNsense](https://opnsense.org/) | Software-defined networking
 | [BorgBackup](https://www.borgbackup.org/) | Data deduplication backup
-| [Prometeus](https://prometheus.io/) | Telemetry
+| [Prometeus](https://prometheus.io/) / [Grafana](https://grafana.com/) | Telemetry
 
 
 ## Network
