@@ -57,10 +57,6 @@ create user nextcloud;
 alter user nextcloud password 'xxx';
 ```
 
-```
-alter database nextcloud set tablespace ts_nextcloud;
-```
-
 ## Apache 2
 ```
 vi /etc/apache2/sites-available/nextcloud.conf
@@ -105,7 +101,7 @@ service apache2 restart
 ```
 
 ```
-chown -R www-data:www-data /var/www/nextcloud/
+chown -R www-data:www-data /opt/nextcloud/www
 ```
 
 ## SSL
