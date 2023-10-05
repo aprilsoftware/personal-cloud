@@ -11,13 +11,6 @@ apt install php8.2 libapache2-mod-php8.2 php8.2-cli
 apt install php8.2-curl php8.2-xml php-gd php-mbstring php-zip php-pgsql php-bz2 php-intl php8.2-bcmath php-fpm php-imagick php-gmp php-apcu php-ldap
 ```
 
-NOTICE: Not enabling PHP 8.2 FPM by default.
-NOTICE: To enable PHP 8.2 FPM in Apache2 do:
-NOTICE: a2enmod proxy_fcgi setenvif
-NOTICE: a2enconf php8.2-fpm
-NOTICE: You are seeing this message because you have apache2 package installed.
-
-
 ## Create a new partition
 ```
 apt install xfsprogs
@@ -124,20 +117,13 @@ a2ensite nextcloud.conf
 
 ```
 a2enmod rewrite
-```
-
-```
 a2enmod remoteip
-```
-
-```
+a2enmod proxy_fcgi
+a2enconf php8.2-fpm
 a2enmod headers
 a2enmod env
 a2enmod dir
 a2enmod mime
-```
-
-```
 a2enmod setenvif
 ```
 
@@ -232,6 +218,10 @@ rm /etc/apache2/sites-available/nextcloud.conf
 
 ```
 service apache2 restart
+```
+
+```
+systemctl restart php8.2-fpm
 ```
 
 

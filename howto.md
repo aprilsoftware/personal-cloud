@@ -22,7 +22,7 @@
 - Email (Postfix + Dovecot)
 - Guacamole
 - [Kubernetes](debian/bookworm/kubernetes/howto.md)
-- Nextcloud
+- [Nextcloud](debian/bookworm/nextcloud/howto.md)
 - Public Key Infrastructure
 - Prometheus
 - rclone
