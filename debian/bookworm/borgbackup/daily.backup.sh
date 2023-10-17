@@ -10,7 +10,7 @@ echo "$(date): Backup ${ARCHIVE} started"
 gluster --mode=script snapshot create gv0_backup gv0 no-timestamp
 gluster --mode=script snapshot activate gv0_backup
 
-mount -t glusterfs hal4-1.local:/snaps/gv0_backup/gv0 /mnt/snapshots/gv0
+mount -t glusterfs node1.local:/snaps/gv0_backup/gv0 /mnt/snapshots/gv0
 
 if [ -d "/mnt/snapshots/gv0/vm" ]
 then
