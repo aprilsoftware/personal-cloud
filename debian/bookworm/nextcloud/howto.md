@@ -147,7 +147,7 @@ apt install certbot python3-certbot-apache
 
 
 ```
-certbot --apache -d nc2.lab1.aprilsoftware.com
+certbot --apache -d server.example.com
 ```
 
 
