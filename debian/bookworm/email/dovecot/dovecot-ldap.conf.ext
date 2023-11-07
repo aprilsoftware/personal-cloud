@@ -1,0 +1,13 @@
+hosts = dc1.example.com
+dn = cn=postfix,ou=Technical Users,ou=Organisation,dc=example,dc=com
+dnpass = YOUR_PASSWORD
+tls = yes
+auth_bind = yes
+ldap_version = 3
+base = ou=Users,ou=Organisation,dc=example,dc=com
+deref = never
+scope = subtree
+user_filter = (&(objectclass=person)(userPrincipalName=%u))
+pass_attrs = userPassword=password
+pass_filter = (&(objectclass=person)(userPrincipalName=%u))
+default_pass_scheme = CRYPT

@@ -1,0 +1,12 @@
+server_host = ldaps://dc1.example.com:636
+version = 3
+search_base = ou=Users,ou=Organisation,dc=example,dc=com
+bind_dn = cn=postfix,ou=Technical Users,ou=Organisation,dc=example,dc=com
+bind_pw = YOUR_PASSWORD
+
+
+scope = sub
+query_filter = (&(objectClass=person)(userPrincipalName=%s))
+result_attribute = userPrincipalName
+result_format = %d/%u/
+#special_result_filter = %s@%d
