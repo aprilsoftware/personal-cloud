@@ -63,7 +63,7 @@ chown vmail:vmail /home/vmail
 
 [Edit /etc/postfix/master.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bookworm/email/postfix/master.cf)
 
-[Edit /etc/postfix/vmail/example_com_aliases.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bookworm/email/postfix/vmail/example_com_aliases.cf)
+[Edit /etc/postfix/vmail/example_com_aliases](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bookworm/email/postfix/vmail/example_com_aliases)
 
 [Edit /etc/postfix/vmail/example_com_auth.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bookworm/email/postfix/vmail/example_com_auth.cf)
 
@@ -74,7 +74,7 @@ cd /etc/postfix/vmail
 ```
 
 ```
-postmap /etc/postfix/vmail/lab1_aprilsoftware_com_aliases.cf
+postmap /etc/postfix/vmail/lab1_aprilsoftware_com_aliases
 ```
 
 # Install [Dovecot](https://www.dovecot.org/)
@@ -376,6 +376,10 @@ milter_default_action = accept
 milter_protocol = 6
 smtpd_milters = local:opendkim/opendkim.sock
 non_smtpd_milters = $smtpd_milters
+```
+
+```
+service opendkim restart
 ```
 
 # DMARC

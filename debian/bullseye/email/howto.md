@@ -51,14 +51,18 @@ useradd -m -u 5000 -g 5000 -s /bin/false vmail
 
 [Edit /etc/postfix/master.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/master.cf)
 
-[Edit /etc/postfix/vmail/example_com_aliases.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/vmail/example_com_aliases.cf)
+[Edit /etc/postfix/vmail/example_com_aliases](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/vmail/example_com_aliases)
 
 [Edit /etc/postfix/vmail/example_com_auth.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/vmail/example_com_auth.cf)
 
 [Edit /etc/postfix/vmail/example_com_mailboxes.cf](https://github.com/aprilsoftware/personal-cloud/blob/main/debian/bullseye/email/postfix/vmail/example_com_mailboxes.cf)
 
 ```
-postmap -q user@example.com ldap:/etc/postfix/vmail/example_com_aliases.cf
+cd /etc/postfix/vmail
+```
+
+```
+postmap /etc/postfix/vmail/lab1_aprilsoftware_com_aliases
 ```
 
 # Install [Dovecot](https://www.dovecot.org/)
