@@ -25,7 +25,7 @@
 - [Nextcloud](debian/bookworm/nextcloud/howto.md)
 - Public Key Infrastructure
 - Prometheus
-- rclone
+- [rclone](debian/bookworm/rclone/howto.md)
 - [tang](debian/bookworm/tang/howto.md)
 - [glia-vm](debian/bookworm/glia-vm/howto.md)
 - [Wireguard as a gateway](debian/bookworm/gateway/howto.md)
