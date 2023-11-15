@@ -27,5 +27,5 @@
 - Prometheus
 - rclone
 - [tang](debian/bookworm/tang/howto.md)
-- vmdb2
+- [glia-vm](debian/bookworm/glia-vm/howto.md)
 - [Wireguard as a gateway](debian/bookworm/gateway/howto.md)
