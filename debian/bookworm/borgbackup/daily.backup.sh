@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+# Copyright (C) 2023 April Software S.A.
+#
+# This work is licensed under the GNU GPLv3 or later.
+# See the LICENSE file in the top-level directory.
+#
 export BORG_REPO=/mnt/gv1/backup/daily
 # Provide the passphare here if the repository is encrypted
 #export BORG_PASSPHRASE=...
