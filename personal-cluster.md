@@ -17,10 +17,10 @@ resulting in a [hyper converged architecture](https://en.wikipedia.org/wiki/Hype
 
 We identified a typical hardware requirements which could be tune on demand.
 
-- 3 regular PC with at least 4 hard drives / SSD and 3 network interfaces
+- 3 regular PC with at least 3 hard drives / SSD and 3 network interfaces
 - 3 network switches (L2): One 10 Gb and two 1 Gb
 - a connection to internet
-- A Rapsberry Pi or a NUC to run a [tang](https://github.com/latchset/tang) server
+- A Rapsberry Pi or a NUC to run a [tang](https://github.com/latchset/tang) server (To decrupt the disk at boot time without having to enter a password)
 
 This procedure can be easily adapted to run a cluster of [Raspberry Pi](https://www.raspberrypi.org/). We managed to run a cluster on 3 Raspberry Pi with limited network capabilities (for instance no routing / no firewall capabilites).
 
