@@ -52,6 +52,14 @@ apt install iptables
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 ```
 
+To forward the traffic from Internet to your local network
+
+```
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j DNAT --to-destination 192.168.0.101:80
+
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j DNAT --to-destination 192.168.0.101:8443
+```
+
 ```
 apt install iptables-persistent
 ```
