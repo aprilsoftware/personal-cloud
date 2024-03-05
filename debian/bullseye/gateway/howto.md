@@ -25,7 +25,7 @@ PrivateKey = ...
 
 [Peer]
 PublicKey = ...
-AllowedIPs = 10.8.0.0/24, 192.168.2.0/24
+AllowedIPs = 10.8.0.0/24, 192.168.0.0/24
 ```
 
 ```
@@ -81,8 +81,6 @@ nano /etc/wireguard/wg0.conf
 [Interface]
 PrivateKey = 
 Address = 10.8.0.2/24
-PreUp = ip route add 192.168.0.0/24 via 192.168.2.1
-PostDown = ip route del 192.168.0.0/24 via 192.168.2.1
 
 [Peer]
 PublicKey = 
