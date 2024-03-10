@@ -23,7 +23,7 @@
 - Guacamole
 - [Kubernetes](debian/bookworm/kubernetes/howto.md)
 - [Nextcloud](debian/bookworm/nextcloud/howto.md)
-- Public Key Infrastructure
+- [Public Key Infrastructure](debian/bookworm/pki/howto.md)
 - [Prometheus](debian/bookworm/prometheus/howto.md)
 - [rclone](debian/bookworm/rclone/howto.md)
 - [tang](debian/bookworm/tang/howto.md)
