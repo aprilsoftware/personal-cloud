@@ -154,14 +154,12 @@ systemctl start step-ca
 ```
 
 # On the client side
-copy root_ca.crt to /usr/local/share/ca-certificates
-
 ```
-sudo cp root_ca.crt /usr/local/share/ca-certificates
+wget -O /usr/local/share/ca-certificates/domain.crt --no-check-certificate https://pki1.example.com/roots.pem
 ```
 
 ```
-sudo update-ca-certificates
+update-ca-certificates
 ```
 
 ```

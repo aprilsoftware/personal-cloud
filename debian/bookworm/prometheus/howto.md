@@ -22,6 +22,8 @@ apt install prometheus-node-exporter
 systemctl enable prometheus-node-exporter
 ```
 
+Optional
+
 ```
 apt install prometheus-libvirt-exporter
 ```
@@ -58,6 +60,30 @@ http://mon1.example.com:3000/
 
 ## TLS
 ```
+wget -O /usr/local/share/ca-certificates/domain.crt --no-check-certificate https://pki1.example.com/roots.pem
+```
+
+```
+update-ca-certificates
+```
+
+```
+apt install certbot
+```
+
+```
+certbot certonly --standalone -d mon1.example.com --server https://pki1.example.com/acme/acme/directory
+```
+
+```
+chmod 444 /etc/letsencrypt/archive/mon1.example.com/privkey1.pem
+```
+
+```
+chmod 444 /etc/letsencrypt/archive/mon1.example.com/fullchain1.pem
+```
+
+```
 ln -s /etc/letsencrypt/live/mon1.example.com/privkey.pem /etc/grafana/grafana.key
 ```
 
@@ -90,14 +116,6 @@ domain = example.com
 protocol = https
 cert_file = /etc/grafana/grafana.crt
 cert_key = /etc/grafana/grafana.key
-```
-
-```
-chmod 444 /etc/letsencrypt/archive/mon1.example.com/privkey1.pem
-```
-
-```
-chmod 444 /etc/letsencrypt/archive/mon1.example.com/fullchain1.pem
 ```
 
 ```
