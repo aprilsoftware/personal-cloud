@@ -5,7 +5,7 @@ apt install build-essential
 ```
 
 ```
-apt install libcairo2-dev libjpeg62-turbo-dev libjpeg-dev libpng-dev libtool-bin
+apt install libcairo2-dev libjpeg62-turbo-dev libjpeg-dev libpng-dev libtool-bin libwebsockets-dev
 ```
 
 ```
@@ -17,7 +17,7 @@ apt install libavcodec-dev libavformat-dev libavutil-dev libswscale-dev
 ```
 
 ```
-apt install freerdp2-dev libpango1.0-dev libssh2-1-dev libtelnet-dev libvncserver-dev 
+apt install freerdp2-dev libpango1.0-dev libssh2-1-dev libtelnet-dev libvncserver-dev
 ```
 
 ```
@@ -41,7 +41,11 @@ cd guacamole-server-1.5.4
 ```
 
 ```
-./configure --with-systemd-dir=/etc/systemd/system/ --disable-guacenc
+export CFLAGS="-Wno-error"
+```
+
+```
+./configure --with-systemd-dir=/etc/systemd/system
 ```
 
 ```
@@ -80,7 +84,7 @@ systemctl start guacd
 
 ## Clean install folder
 ```
-cd ...
+cd ..
 ```
 
 ```
@@ -92,8 +96,17 @@ rm -r guacamole-server-1.5.4*
 apt install openjdk-17-jdk-headless
 ```
 
+Tomcat10 not yet supported
 ```
-apt install tomcat10
+echo "deb http://deb.debian.org/debian/ bullseye main" | sudo tee /etc/apt/sources.list.d/bullseye.list &> /dev/null
+```
+
+```
+apt update
+```
+
+```
+apt install tomcat9
 ```
 
 ```
@@ -101,7 +114,7 @@ wget -O guacamole-1.5.4.war https://downloads.apache.org/guacamole/1.5.4/binary/
 ```
 
 ```
-mv guacamole-1.5.4.war /var/lib/tomcat10/webapps
+mv guacamole-1.5.4.war /var/lib/tomcat9/webapps
 ```
 
 # Configuration
@@ -142,9 +155,15 @@ tar -zxvf guacamole-auth-totp-1.5.4.tar.gz -C ./
 ```
 
 ```
-mv guacamole-auth-ldap-1.5.4/guacamole-auth-ldap-1.5.4.jar /etc/guacamole/extensions
-mv guacamole-auth-jdbc-1.5.4/postgresql/guacamole-auth-jdbc-postgresql-1.5.4.jar /etc/guacamole/extensions
-mv guacamole-auth-totp-1.5.4/guacamole-auth-totp-1.5.4.jar /etc/guacamole/extensions
+cp guacamole-auth-ldap-1.5.4/guacamole-auth-ldap-1.5.4.jar /etc/guacamole/extensions
+```
+
+```
+cp guacamole-auth-jdbc-1.5.4/postgresql/guacamole-auth-jdbc-postgresql-1.5.4.jar /etc/guacamole/extensions
+```
+
+```
+cp guacamole-auth-totp-1.5.4/guacamole-auth-totp-1.5.4.jar /etc/guacamole/extensions
 ```
 
 ## Install [PostgreSQL](https://www.postgresql.org/)
@@ -154,7 +173,7 @@ apt install postgresql
 
 Download postgresql driver
 ```
-wget -O postgresql-42.5.4.jar https://jdbc.postgresql.org/download/postgresql-42.5.4.jar
+wget -O postgresql-42.7.3.jar https://jdbc.postgresql.org/download/postgresql-42.7.3.jar
 ```
 
 ```
@@ -162,12 +181,24 @@ mkdir /etc/guacamole/lib
 ```
 
 ```
-mv postgresql-42.5.4.jar /etc/guacamole/lib
+mv postgresql-42.7.3.jar /etc/guacamole/lib
 ```
 
 ### Create PostgreSQL Database
 ```
-su postgres
+mkdir -p /var/lib/postgresql/guacamole
+```
+
+```
+chown -R postgres:postgres /var/lib/postgresql/guacamole
+```
+
+```
+cp -r guacamole-auth-jdbc-1.5.4/postgresql/schema /var/lib/postgresql/guacamole
+```
+
+```
+sudo -u postgres -i
 ```
 
 ```
@@ -175,7 +206,7 @@ createdb guacamole
 ```
 
 ```
-cat schema/*.sql | psql -d guacamole -f -
+cat guacamole/schema/*.sql | psql -d guacamole -f -
 ```
 
 ```
@@ -195,7 +226,15 @@ GRANT SELECT,USAGE ON ALL SEQUENCES IN SCHEMA public TO guacamole;
 ```
 
 ```
+\q
+```
+
+```
 exit
+```
+
+```
+rm -r /var/lib/postgresql/guacamole
 ```
 
 ## Configure PostgreSQL and LDAP properties
@@ -208,7 +247,9 @@ postgresql-hostname: localhost
 postgresql-database: guacamole
 postgresql-username: guacamole
 postgresql-password: xxx
+postgresql-auto-create-accounts: true
 
+# LDAP config for Samba Active Directory
 ldap-hostname:dc1.example.com
 ldap-port:636
 ldap-encryption-method:ssl
@@ -216,9 +257,20 @@ ldap-user-base-dn:ou=IT,dc=example,dc=com
 ldap-config-base-dn:ou=IT,dc=example,dc=com
 ldap-username-attribute:sAMAccountName
 ldap-user-search-filter:(&(|(objectclass=person))(|(|(memberof=CN=VDI Users,OU=Users,OU=IT,DC=example,DC=com)(primaryGroupID=1121))))
-
 ldap-search-bind-dn:cn=nextcloud,cn=Users,dc=example,dc=com
-ldap-search-bind-password:xxx
+ldap-search-bind-password: xxx
+
+# LDAP config for Microsoft Active Directory
+#ldap-hostname: dc1.example.com dc2.example.com
+#ldap-port: 636
+#ldap-encryption-method: ssl
+#ldap-user-base-dn: ou=IT,dc=example,dc=com
+#ldap-config-base-dn: ou=IT,dc=example,dc=com
+#ldap-username-attribute: sAMAccountName
+#ldap-user-search-filter:(objectClass=user)(!(objectCategory=computer))
+#ldap-search-bind-dn: cn=nextcloud,cn=Users,dc=example,dc=com
+#ldap-search-bind-password: xxx
+#ldap-max-search-results:200
 ```
 
 ## Clean install folder
@@ -232,7 +284,7 @@ sudo apt install certbot
 ```
 
 ```
-sudo certbot certonly --standalone -d vd1.example.com
+sudo certbot certonly --standalone -d vdi1.example.com
 ```
 
 ```
@@ -244,9 +296,9 @@ cd /etc/tomcat9/ssl
 ```
 
 ```
-cp /etc/letsencrypt/live/vd1.example.com/cert.pem ./
-cp /etc/letsencrypt/live/vd1.example.com/chain.pem ./
-cp /etc/letsencrypt/live/vd1.example.com/privkey.pem ./
+cp /etc/letsencrypt/live/vdi1.example.com/cert.pem ./
+cp /etc/letsencrypt/live/vdi1.example.com/chain.pem ./
+cp /etc/letsencrypt/live/vdi1.example.com/privkey.pem ./
 ```
 
 ```
@@ -266,6 +318,12 @@ vi /etc/tomcat9/server.xml
                 certificateChainFile="conf/ssl/chain.pem" />
     </SSLHostConfig>
 </Connector>
+```
+
+# First connection
+```
+User: guacadmin
+Password: guacadmin
 ```
 
 # Connection Variables

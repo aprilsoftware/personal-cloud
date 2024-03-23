@@ -20,7 +20,7 @@
 - Samba as an Active Directory
 - [BorgBackup](debian/bookworm/borgbackup/howto.md)
 - [Email (Postfix + Dovecot)](debian/bookworm/email/howto.md)
-- Guacamole
+- [Guacamole](debian/bookworm/guacamole/howto.md)
 - [Kubernetes](debian/bookworm/kubernetes/howto.md)
 - [Nextcloud](debian/bookworm/nextcloud/howto.md)
 - [Public Key Infrastructure](debian/bookworm/pki/howto.md)
