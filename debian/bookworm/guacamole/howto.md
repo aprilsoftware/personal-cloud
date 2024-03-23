@@ -142,11 +142,6 @@ JDBC
 wget -O guacamole-auth-jdbc-1.5.4.tar.gz https://downloads.apache.org/guacamole/1.5.4/binary/guacamole-auth-jdbc-1.5.4.tar.gz
 ```
 
-[2FA](https://fr.wikipedia.org/wiki/Double_authentification)
-```
-wget -O guacamole-auth-totp-1.5.4.tar.gz https://downloads.apache.org/guacamole/1.5.4/binary/guacamole-auth-totp-1.5.4.tar.gz
-```
-
 ```
 mkdir /etc/guacamole/extensions
 ```
@@ -160,19 +155,11 @@ tar -zxvf guacamole-auth-jdbc-1.5.4.tar.gz -C ./
 ```
 
 ```
-tar -zxvf guacamole-auth-totp-1.5.4.tar.gz -C ./
-```
-
-```
 cp guacamole-auth-ldap-1.5.4/guacamole-auth-ldap-1.5.4.jar /etc/guacamole/extensions
 ```
 
 ```
 cp guacamole-auth-jdbc-1.5.4/postgresql/guacamole-auth-jdbc-postgresql-1.5.4.jar /etc/guacamole/extensions
-```
-
-```
-cp guacamole-auth-totp-1.5.4/guacamole-auth-totp-1.5.4.jar /etc/guacamole/extensions
 ```
 
 ## Install [PostgreSQL](https://www.postgresql.org/)
@@ -334,6 +321,30 @@ vi /etc/tomcat9/server.xml
 User: guacadmin
 Password: guacadmin
 ```
+
+# Enable TOTP (Should be enabled after testing LDAP / Database authentication)
+
+[2FA](https://fr.wikipedia.org/wiki/Double_authentification)
+```
+wget -O guacamole-auth-totp-1.5.4.tar.gz https://downloads.apache.org/guacamole/1.5.4/binary/guacamole-auth-totp-1.5.4.tar.gz
+```
+
+```
+tar -zxvf guacamole-auth-totp-1.5.4.tar.gz -C ./
+```
+
+```
+cp guacamole-auth-totp-1.5.4/guacamole-auth-totp-1.5.4.jar /etc/guacamole/extensions
+```
+
+```
+systemctl restart tomcat9
+```
+
+```
+rm -r guacamole-auth-totp-1.5.4
+```
+
 
 # Connection Variables
 ```
