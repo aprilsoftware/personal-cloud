@@ -78,6 +78,7 @@ systemctl enable guacd
 systemctl start guacd
 ```
 
+## Clean install folder
 ```
 cd ...
 ```
@@ -106,30 +107,6 @@ mv guacamole-1.5.4.war /var/lib/tomcat10/webapps
 # Configuration
 ```
 touch /etc/guacamole/guacamole.properties
-```
-
-## User mapping example
-```
-echo -n "@Password" | md5sum
-```
-
-```
-vi /etc/guacamole/user-mapping.xml
-```
-
-```
-user-mapping>
-  <authorize username="user" password="XXXX" encoding="md5">
-        <connection name="vd1.example.com">
-            <protocol>rdp</protocol>
-            <param name="hostname">ws1.example.com</param>
-            <param name="port">3389</param>
-            <param name="username">user</param>
-            <param name="domain">example</param>
-            <param name="ignore-cert">true</param>
-        </connection>
-  </authorize>
-</user-mapping>
 ```
 
 ## Extensions
@@ -170,11 +147,7 @@ mv guacamole-auth-jdbc-1.5.4/postgresql/guacamole-auth-jdbc-postgresql-1.5.4.jar
 mv guacamole-auth-totp-1.5.4/guacamole-auth-totp-1.5.4.jar /etc/guacamole/extensions
 ```
 
-```
-rm -r guacamole-auth-*
-```
-
-## [PostgreSQL](https://www.postgresql.org/)
+## Install [PostgreSQL](https://www.postgresql.org/)
 ```
 apt install postgresql
 ```
@@ -192,7 +165,11 @@ mkdir /etc/guacamole/lib
 mv postgresql-42.5.4.jar /etc/guacamole/lib
 ```
 
-### Create DB
+### Create PostgreSQL Database
+```
+su postgres
+```
+
 ```
 createdb guacamole
 ```
@@ -218,6 +195,11 @@ GRANT SELECT,USAGE ON ALL SEQUENCES IN SCHEMA public TO guacamole;
 ```
 
 ```
+exit
+```
+
+## Configure PostgreSQL and LDAP properties
+```
 vi /etc/guacamole/guacamole.properties
 ```
 
@@ -239,14 +221,9 @@ ldap-search-bind-dn:cn=nextcloud,cn=Users,dc=example,dc=com
 ldap-search-bind-password:xxx
 ```
 
-
-# Connection Variables
+## Clean install folder
 ```
-${GUAC_USERNAME}
-```
-
-```
-${GUAC_PASSWORD}
+rm -r guacamole-auth-*
 ```
 
 ## TLS
@@ -291,3 +268,11 @@ vi /etc/tomcat9/server.xml
 </Connector>
 ```
 
+# Connection Variables
+```
+${GUAC_USERNAME}
+```
+
+```
+${GUAC_PASSWORD}
+```
