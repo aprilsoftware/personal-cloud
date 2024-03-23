@@ -91,6 +91,15 @@ cd ..
 rm -r guacamole-server-1.5.4*
 ```
 
+```
+apt remove build-essential
+```
+
+```
+apt autoremove
+```
+
+
 ## Install Client
 ```
 apt install openjdk-17-jdk-headless
@@ -273,7 +282,7 @@ ldap-search-bind-password: xxx
 #ldap-max-search-results:200
 ```
 
-## Clean install folder
+## Clean install
 ```
 rm -r guacamole-auth-*
 ```
