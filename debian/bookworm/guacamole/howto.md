@@ -281,7 +281,7 @@ ldap-search-bind-password: xxx
 rm -r guacamole-auth-*
 ```
 
-## TLS ([Public Key Infrastructure](/debian/bookworm/pki/howto.md))
+## TLS ([Public Key Infrastructure](../pki/howto.md))
 ```
 sudo apt install certbot 
 ```

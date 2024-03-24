@@ -58,7 +58,7 @@ URL
 http://mon1.example.com:3000/
 ```
 
-## TLS ([Public Key Infrastructure](/debian/bookworm/pki/howto.md))
+## TLS ([Public Key Infrastructure](../pki/howto.md))
 ```
 wget -O /usr/local/share/ca-certificates/domain.crt --no-check-certificate https://pki1.example.com/roots.pem
 ```
