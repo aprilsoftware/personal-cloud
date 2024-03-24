@@ -174,3 +174,31 @@ certbot certonly --standalone -d test1.example.com --server https://pki1.example
 ```
 certbot renew
 ```
+
+# Certificate Duration
+Change in the /etc/step-ca/config/ca.json file the maxTLSCertDuration and the defaultTLSCertDuration to increase the certificate duration.
+
+```
+...
+  "db": {
+    "type": "badgerv2",
+    "dataSource": "/etc/step-ca/db",
+    "badgerFileLoadingMode": ""
+  },
+  "authority": {
+    "claims": {
+      "minTLSCertDuration": "5m",
+      "maxTLSCertDuration": "8640h",
+      "defaultTLSCertDuration": "8640h",
+      "disableRenewal": false,
+      "allowRenewalAfterExpiry": false,
+      "minHostSSHCertDuration": "5m",
+      "maxHostSSHCertDuration": "1680h",
+      "defaultHostSSHCertDuration": "720h",
+      "minUserSSHCertDuration": "5m",
+      "maxUserSSHCertDuration": "24h",
+      "defaultUserSSHCertDuration": "16h"
+    },
+    "provisioners": [
+...
+```
