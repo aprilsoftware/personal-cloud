@@ -60,6 +60,10 @@ http://mon1.example.com:3000/
 
 ## TLS ([Public Key Infrastructure](../pki/howto.md))
 ```
+apt install wget
+```
+
+```
 wget -O /usr/local/share/ca-certificates/domain.crt --no-check-certificate https://pki1.example.com/roots.pem
 ```
 

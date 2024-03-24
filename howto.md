@@ -17,7 +17,7 @@
 
 ## Debian Bookworm
 - [Cluster Nodes](debian/bookworm/cluster-nodes/howto.md)
-- Samba as an Active Directory
+- [Samba as an Active Directory](debian/bookworm/active-directory/howto.md)
 - [BorgBackup](debian/bookworm/borgbackup/howto.md)
 - [Email (Postfix + Dovecot)](debian/bookworm/email/howto.md)
 - [Guacamole](debian/bookworm/guacamole/howto.md)

@@ -64,7 +64,7 @@ samba-tool dns zonecreate example.com 0.168.192.in-addr.arpa -U Administrator
 ```
 
 ```
-samba-tool dns add 192.168.0.101 0.168.192.in-addr.arpa 1 PTR dc1.example.com -U Administrator
+samba-tool dns add 192.168.0.101 8.168.192.in-addr.arpa 1 PTR dc1.example.com -U Administrator
 ```
 
 ```
@@ -78,13 +78,30 @@ systemctl start samba-ad-dc
 
 # Optional Feature for Windows 11
 
-## SSL
+## TLS ([Public Key Infrastructure](../pki/howto.md))
+192.168.0.102 being the IP of pki1.example.com
+```
+samba-tool dns add dc1.example.com example.com pki1 A 192.168.0.102 -U Administrator
+```
+
+```
+apt install wget
+```
+
+```
+wget -O /usr/local/share/ca-certificates/domain.crt --no-check-certificate https://pki1.example.com/roots.pem
+```
+
+```
+update-ca-certificates
+```
+
 ```
 apt install certbot
 ```
 
 ```
-certbot certonly --standalone -d dc1.example.com
+certbot certonly --standalone -d dc1.example.com --server https://pki1.example.com/acme/acme/directory
 ```
 
 ```
@@ -94,6 +111,7 @@ vi /etc/samba/smb.conf
 Section [global]
 
 ```
+workgroup = YOUR DOMAIN
 tls enabled  = yes
 tls keyfile  = /etc/letsencrypt/live/dc1.example.com/privkey.pem
 tls certfile = /etc/letsencrypt/live/dc1.example.com/fullchain.pem
@@ -117,6 +135,8 @@ vi /etc/samba/smb.conf
 Section [global]
 
 ```
+...
+
 ntlm auth = mschapv2-and-ntlmv2-only
 disable netbios = yes
 smb ports = 445
@@ -125,6 +145,16 @@ printcap name = /dev/null
 load printers = no
 disable spoolss = yes
 printing = bsd
+
+...
+```
+
+```
+systemctl stop samba-ad-dc
+```
+
+```
+systemctl start samba-ad-dc
 ```
 
 # Debian join domain

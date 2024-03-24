@@ -155,6 +155,10 @@ systemctl start step-ca
 
 # On the client side
 ```
+apt install wget
+```
+
+```
 wget -O /usr/local/share/ca-certificates/domain.crt --no-check-certificate https://pki1.example.com/roots.pem
 ```
 
@@ -201,4 +205,8 @@ Change in the /etc/step-ca/config/ca.json file the maxTLSCertDuration and the de
     },
     "provisioners": [
 ...
+```
+
+```
+systemctl restart step-ca
 ```
