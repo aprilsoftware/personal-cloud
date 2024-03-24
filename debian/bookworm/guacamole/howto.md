@@ -123,7 +123,15 @@ wget -O guacamole-1.5.4.war https://downloads.apache.org/guacamole/1.5.4/binary/
 ```
 
 ```
-mv guacamole-1.5.4.war /var/lib/tomcat9/webapps
+systemctl stop tomcat9
+```
+
+```
+rm -r /var/lib/tomcat9/webapps/ROOT
+```
+
+```
+mv guacamole-1.5.4.war /var/lib/tomcat9/webapps/ROOT.war
 ```
 
 # Configuration
@@ -142,6 +150,11 @@ JDBC
 wget -O guacamole-auth-jdbc-1.5.4.tar.gz https://downloads.apache.org/guacamole/1.5.4/binary/guacamole-auth-jdbc-1.5.4.tar.gz
 ```
 
+[2FA](https://fr.wikipedia.org/wiki/Double_authentification)
+```
+wget -O guacamole-auth-totp-1.5.4.tar.gz https://downloads.apache.org/guacamole/1.5.4/binary/guacamole-auth-totp-1.5.4.tar.gz
+```
+
 ```
 mkdir /etc/guacamole/extensions
 ```
@@ -155,11 +168,19 @@ tar -zxvf guacamole-auth-jdbc-1.5.4.tar.gz -C ./
 ```
 
 ```
+tar -zxvf guacamole-auth-totp-1.5.4.tar.gz -C ./
+```
+
+```
 cp guacamole-auth-ldap-1.5.4/guacamole-auth-ldap-1.5.4.jar /etc/guacamole/extensions
 ```
 
 ```
 cp guacamole-auth-jdbc-1.5.4/postgresql/guacamole-auth-jdbc-postgresql-1.5.4.jar /etc/guacamole/extensions
+```
+
+```
+cp guacamole-auth-totp-1.5.4/guacamole-auth-totp-1.5.4.jar /etc/guacamole/extensions
 ```
 
 ## Install [PostgreSQL](https://www.postgresql.org/)
@@ -243,9 +264,7 @@ postgresql-hostname: localhost
 postgresql-database: guacamole
 postgresql-username: guacamole
 postgresql-password: xxx
-postgresql-auto-create-accounts: true
 
-# LDAP config for Samba Active Directory
 ldap-hostname:dc1.example.com
 ldap-port:636
 ldap-encryption-method:ssl
@@ -255,18 +274,6 @@ ldap-username-attribute:sAMAccountName
 ldap-user-search-filter:(&(|(objectclass=person))(|(|(memberof=CN=VDI Users,OU=Users,OU=IT,DC=example,DC=com)(primaryGroupID=1121))))
 ldap-search-bind-dn:cn=nextcloud,cn=Users,dc=example,dc=com
 ldap-search-bind-password: xxx
-
-# LDAP config for Microsoft Active Directory
-#ldap-hostname: dc1.example.com dc2.example.com
-#ldap-port: 636
-#ldap-encryption-method: ssl
-#ldap-user-base-dn: ou=IT,dc=example,dc=com
-#ldap-config-base-dn: ou=IT,dc=example,dc=com
-#ldap-username-attribute: sAMAccountName
-#ldap-user-search-filter:(objectClass=user)(!(objectCategory=computer))
-#ldap-search-bind-dn: cn=nextcloud,cn=Users,dc=example,dc=com
-#ldap-search-bind-password: xxx
-#ldap-max-search-results:200
 ```
 
 ## Clean install
@@ -274,13 +281,13 @@ ldap-search-bind-password: xxx
 rm -r guacamole-auth-*
 ```
 
-## TLS
+## TLS ([Public Key Infrastructure](/debian/bookworm/pki/howto.md))
 ```
 sudo apt install certbot 
 ```
 
 ```
-sudo certbot certonly --standalone -d vdi1.example.com
+certbot certonly --standalone -d vdi1.example.com --server https://pki1.example.com/acme/acme/directory
 ```
 
 ```
@@ -316,35 +323,32 @@ vi /etc/tomcat9/server.xml
 </Connector>
 ```
 
+```
+systemctl start tomcat9
+```
+
+# Redirect
+```
+apt install iptables
+```
+
+```
+iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
+```
+
+```
+apt install iptables-persistent
+```
+
+
 # First connection
+
+https://vdi1.example.com
+
 ```
 User: guacadmin
 Password: guacadmin
 ```
-
-# Enable TOTP (Should be enabled after testing LDAP / Database authentication)
-
-[2FA](https://fr.wikipedia.org/wiki/Double_authentification)
-```
-wget -O guacamole-auth-totp-1.5.4.tar.gz https://downloads.apache.org/guacamole/1.5.4/binary/guacamole-auth-totp-1.5.4.tar.gz
-```
-
-```
-tar -zxvf guacamole-auth-totp-1.5.4.tar.gz -C ./
-```
-
-```
-cp guacamole-auth-totp-1.5.4/guacamole-auth-totp-1.5.4.jar /etc/guacamole/extensions
-```
-
-```
-systemctl restart tomcat9
-```
-
-```
-rm -r guacamole-auth-totp-1.5.4
-```
-
 
 # Connection Variables
 ```
