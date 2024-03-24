@@ -76,7 +76,7 @@ systemctl start samba-ad-dc
 ```
 
 
-# Optional Feature for Windows 11
+# Optional Feature
 
 ## TLS ([Public Key Infrastructure](../pki/howto.md))
 192.168.0.102 being the IP of pki1.example.com
